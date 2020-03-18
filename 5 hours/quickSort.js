@@ -18,3 +18,26 @@ na lista [1, 3, 4], o '4' é o pivot... e assim por diante. quando tem só 1 num
 
 pivot never gets passed down!!!
 
+  
+  
+function quickSort(arr) {
+  if (arr.length <=1) {
+    return arr
+  }
+  
+  const pivot = arr[arr.length-1]
+  
+  const left = []
+  const right =[]
+  
+  for (let i = 0, l = arr.length-1; i < l ;i++) { //arr.length-1 p não pegar o último número (que é o pivot)
+    if (arr[i] < pivot) {
+      left.push(arr[i])
+    } else {
+      right.push(arr[i])
+    }
+  }
+  return [...quickSort(left), pivot, ...quickSort(right)]
+}
+
+console.log(quickSort([2, 4, 1, 7, 5, 84, 33, 55, 45]))
