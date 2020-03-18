@@ -14,3 +14,19 @@ function insertionSort(arr) {
         }
      } return arr
 }
+
+
+//que eu mesmo fiz, minha lógica
+
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    for (let j=0; j < i; j++) { //1. o 'j' é sempre o número 'de antes' na lista (no array). 
+      if (arr[j] > arr[i]) { //2. se o número de antes é maior que o de depois
+        let spliced = arr.splice(j, 1) //3. tira o  número de antes
+        arr.splice(i, 0, spliced[0]) //4. e poe ele depois do 'de depois' de antes
+      }                     //lembrar que splice sempre RETORNA UM ARRAY
+    }                       //por isso, pegar o item daquele array spliced[0]
+  } return arr
+}
+
+console.log(insertionSort([10, 2, 11, 55, 23]))
