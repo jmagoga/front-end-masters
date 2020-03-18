@@ -52,9 +52,48 @@ function stitch(left, right) {
       results.push(right.shift())
     }
   }
-  return results
+  return results //n esquecer o return
   
 }
   
 
 console.log(mergeSort([10, 2, 11, 55, 23]))
+
+//abaixo da erro no no codepen (unexpected { at line 2)
+
+function mergeSort(arr) {
+  if (arr.length < 2) {
+    return arr
+  }
+  const length = arr.length
+  const middle = Math.floor(length / 2)
+  const left = arr.slice(0, middle)
+  const right = arr.slice(middle, length)
+  
+  const mergedLeft = mergeSort(left)
+  const mergedRight = mergeSort(right)
+  
+  return stitch(mergedLeft, mergedRight) //não esquecer o 'return'
+}
+
+stitch(left, right) {
+  const results = []
+
+  while (left.length && right.length) {
+    if (left[0] <= right[0]) {
+      results.push(left.shift())
+    } else {
+      results.push(right.shift())
+    }
+    while (left.length) {
+      results.push(left.shift())
+    }
+    while (right.length) {
+      results.push(right.shift())
+    }
+  }
+    return results
+  }
+  
+
+console.log(mergeSort([12, 3, 1, 55, 5, 6, 22]))
