@@ -76,7 +76,7 @@ function mergeSort(arr) {
   return stitch(mergedLeft, mergedRight) //não esquecer o 'return'
 }
 
-stitch(left, right) {
+stitch(left, right) { //n funciona pq eu nao declarei 'function'
   const results = []
 
   while (left.length && right.length) {
@@ -94,6 +94,44 @@ stitch(left, right) {
   }
     return results
   }
+  
+
+console.log(mergeSort([12, 3, 1, 55, 5, 6, 22]))
+
+
+
+
+
+
+//melhor maneira de todas
+
+function mergeSort(arr) {
+  if (arr.length < 2) {
+    return arr
+  }
+  const length = arr.length
+  const middle = Math.floor(length / 2)
+  const left = arr.slice(0, middle)
+  const right = arr.slice(middle, length)
+  
+  const mergedLeft = mergeSort(left)
+  const mergedRight = mergeSort(right)
+  
+  return stitch(mergedLeft, mergedRight) //não esquecer o 'return'
+}
+
+function stitch(left, right) {
+  const results = []
+
+  while (left.length && right.length) {
+    if (left[0] <= right[0]) {
+      results.push(left.shift())
+    } else {
+      results.push(right.shift())
+    }
+  }
+    return [...results, ...left, ...right]   //bem mais simples. ou left ou right vao estar vazios, entao poe os dois ali. aquele q tiver coisa vai passar aquele q nao tiver nada n passa nada
+}
   
 
 console.log(mergeSort([12, 3, 1, 55, 5, 6, 22]))
