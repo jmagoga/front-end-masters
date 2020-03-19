@@ -21,4 +21,4 @@ arrays have a stack interface, but they are not strict to this order
 method peek, to see what's at the top
       -we are always programming on a stack!!! pensar em funções chamadas dentro de outras funções... 
       sempre se poe no stack, tira do stack, *last in, first out*
-
+programming is a stack
