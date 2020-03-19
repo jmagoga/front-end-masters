@@ -37,7 +37,7 @@ function quickSort(arr) {
       right.push(arr[i])
     }
   }
-  return [...quickSort(left), pivot, ...quickSort(right)]
+  return [...quickSort(left), pivot, ...quickSort(right)] //recursividade acontece aqui no return
 }
 
 console.log(quickSort([2, 4, 1, 7, 5, 84, 33, 55, 45]))
