@@ -22,3 +22,11 @@ method peek, to see what's at the top
       -we are always programming on a stack!!! pensar em funções chamadas dentro de outras funções... 
       sempre se poe no stack, tira do stack, *last in, first out*
 programming is a stack
+
+QUEUE
+first in, first out
+enqueue - add algo na fila
+dequeue - tira o primeiro da fila
+tipo em um console.log. first in, first out
+tem tb priority queues - alguns q tem mais prioridade passam a frente de outros
+as vezes tem tanta coisa com priority que as sem priority nunca executam. enta tem que ter um algoritimo pra ver isso ai.
