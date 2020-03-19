@@ -1,3 +1,10 @@
+//imagina que tu quer deletar um monte da lista... isso é ruim.
+//se tu precisa só acessar uma coisa (get) é ótimo.
+
+//LinkedList é boa para delete e por coisas no meio e tal. mas LinkedList é ruim para ler
+
+
+//ARRAYLIST
 imagina que tu tem um array
 
 ['foo', 'bar', 'baz', 'what', 'ever'] e tu deleta 'bar' (indice 1). todos os elementos da direita tem que mover
@@ -30,7 +37,7 @@ class ArrayList {
   get(index) {
     return this.data[index]
   }
-  delete(index) {
+  delete(index) { //delete is very expensive. shifting everything one place in memory!
     const ans = this.data[index]
     _collapse(index)
     return ans
