@@ -38,8 +38,8 @@ class ArrayList {
     return this.data[index]
   }
   delete(index) { //delete is very expensive. shifting everything one place in memory!
-    const ans = this.data[index]
-    _collapse(index)
+    const ans = this.data[index];
+    this._collapse(index)
     return ans
   }
   _collapse(index){
@@ -51,6 +51,15 @@ class ArrayList {
   }
 }
 
+var teste = new ArrayList
 
-
+teste.push("Julio")
+teste.push("Hermes")
+teste.push("Heron")
+teste.push("Sandra")
+console.log(teste) //{"length":4,  "data":{"0":"Julio","1":"Hermes","2":"Heron","3":"Sandra"}}
+teste.pop()
+console.log(teste)//{"length":3,   "data":{"0":"Julio","1":"Hermes","2":"Heron"}}
+teste.delete(0)
+console.log(teste)//{"length":2,   "data":{"0":"Hermes","1":"Heron"}}
 
