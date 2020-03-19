@@ -1,3 +1,5 @@
+//boa pra quando tu ja tem uma lista que está meio sorted, organizada, ordenada
+
 //actually used
 
 //inner loop
