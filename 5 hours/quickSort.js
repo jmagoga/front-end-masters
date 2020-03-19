@@ -41,3 +41,24 @@ function quickSort(arr) {
 }
 
 console.log(quickSort([2, 4, 1, 7, 5, 84, 33, 55, 45]))
+
+
+
+
+
+
+
+
+
+   //quicksort chooses the middle of the 3 pivots
+//aprender quickSort3()       because the earlier one is bad if everything is sorted
+//chooses the element at the middle to be the pivot
+
+[1, 2, 3, 4, 5]
+ .     .     .
+      chooses 3 as the pivot
+      
+      
+//mas eh tb um problema se tu tem
+[1, 2, 1, 3, 1]
+         aqui nao muda nada e não adianta nada (mas tem uma chance menor!!!)
