@@ -17,3 +17,41 @@ para fazer o pop(), da ate para keep track of the penultimate tail. ai deleta o 
 orr (and?) you have to make the second to last (the penultimate tail?) point to nothing (null), then it becomes the tail
      
 keep track of the head to know the list. tail is even optional
+     
+class LinkedList {
+  constructor() {
+    this.length = 0
+    this.head = null
+    this.tail = null
+  }
+  push(value) {
+    
+  }
+  pop() {
+    
+    return value
+  }
+  _find(value, test=this._test) {
+    
+  }
+  _test(a, b) {
+    return a === b;J
+  }
+  _testIndex(search, __, i) { //'__' means I don't care what this is, as I'm not referencing it later
+    return search === i //did I find the correct index?
+  }
+  get(index) {
+    
+  }
+  delete(index) {
+    
+  }
+}
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null
+  }
+  
+}
