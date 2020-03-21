@@ -6,12 +6,21 @@ very fast for lookups, delete and adds bigO(1)
 
 not useful for stuff with order
 
-
-//aqui só o hash (picar)
-hash(input, name) {
-  let num = 0
-  for (let i = 0; i < input.length; i++){
-      num += input.charCodeAt * i
+class HashTableSet {
+  constructor() {
+    this.table = new Array(255)
   }
-  return num & max
+  add(input) {
+    this.table[this.hash(input, 255)] = input
+  }
+  check(input) {
+    return !!this.table[this.hash(input, 255)]
+  }
+  hash(input, name) {
+    let num = 0
+    for (let i = 0; i < input.length; i++){
+        num += input.charCodeAt * i
+    }
+    return num & max
+  }
 }
