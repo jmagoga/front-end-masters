@@ -21,6 +21,6 @@ class HashTableSet {
     for (let i = 0; i < input.length; i++){
         num += input.charCodeAt * i
     }
-    return num & max
+    return num % max
   }
 }
