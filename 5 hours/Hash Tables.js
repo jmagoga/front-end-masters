@@ -16,7 +16,7 @@ class HashTableSet {
   check(input) {
     return !!this.table[this.hash(input, 255)]
   }
-  hash(input, name) {
+  hash(input, max) {
     let num = 0
     for (let i = 0; i < input.length; i++){
         num += input.charCodeAt * i
