@@ -26,6 +26,9 @@ lookups are bigO(log n)... to add a sortedList to a BST you can have bigO(n)
 (if you have a sortedList inserted, it's going to be a straight line in a sortedList)
 
 having the data randomized is very important for a binary search tree
+ 
+PRACTICAL USES: when you have ordered data and you need to search for nodes very very quickly. some databases are done with trees
+even auto completes probably use trees
 
 class Tree {
   constructor() {
