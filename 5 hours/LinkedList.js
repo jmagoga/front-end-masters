@@ -28,11 +28,11 @@ class LinkedList {
     const node = new Node(value)
     this.length++
     if (!this.head) {
-      this.head = node //statement bem interessante. tudo em uma linha
+      this.head = node //1. se nao tem nada na lista, ele vai ser o 'head'
     } else {
-      this.tail.next = node;
+      this.tail.next = node; //2. se não é o 'head', dai ele é o 'tail', pq é o último 
     }
-    this.tail = node
+    this.tail = node //3. se nao tem nada na lista, ele vai ser o 'tail' tb
   }
   pop(value) {
     return this.delete(this.length-2)
@@ -40,14 +40,14 @@ class LinkedList {
   _find(value, test=this._test) {
     let current = this.head
     let i = 0
-    while(current) {
+    while(current) {    //how come there's 4 arguments for 'test'
       if (test(value, current.value, i, current)) { //current.value = whatever node I am looking at. current is the node itself
         return current
       }
         current = current.next
         i++
     }
-    return null // I didn't get what I was looking for
+    return null // if we break out of the loop --> I didn't get what I was looking for
   }
   _test(a, b) {
     return a === b;
@@ -61,30 +61,30 @@ class LinkedList {
     return node.value
   }
   delete(index) {
-    if (index === 0) {
+    if (index === 0) { //is this the head?
       const head = this.head;
-      if (head) {
+      if (head) { //if deleting head, point to correct hea
         this.head = head.next //para não deletar de cara a head, ela tem que apontar para algum lugar
       } else {
-        this.tail = this.head = null
+        this.tail = this.head = null //if head is null, then tail is gonna be null as well
       }
       this.length--
       return head.value
-    }
+    }//acaba statement sobre head e agora volta delete em geral
     const node = this._find(index-1, this._testIndex) //procurando pela coisa que está antes
     const excise = node.next //excise deleting
     if (!excise) return null //se nao tem nada para deletar, então não deleta
     node.next = excise.next //grab the node that is going to be delted, grab its next and make it the previous node's next
     if (node.next && !node.next.next) this.tail = node.next//2 hops
     this.length--
-    return excise.value
+    return excise.value 
   }
 }
 
 class Node {
   constructor(value) {
     this.value = value;
-    this.next = null
+    this.next = null //points at nothing intially
   }
   
 }
