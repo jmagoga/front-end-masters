@@ -6,6 +6,8 @@ very fast for lookups, delete and adds bigO(1)
 
 not useful for stuff with order
 
+if you need sets or maps, that's a good way to go
+
 class HashTableSet {
   constructor() {
     this.table = new Array(255)
