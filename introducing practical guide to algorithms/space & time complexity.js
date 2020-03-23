@@ -19,3 +19,24 @@ ordem de time complexity
 shift(), unshift() --> linear. tu add uma coisa mas move todos os outros itens do array pro lado 'n' times.
 
 reduce is linear ('n', it's just a loop under the hood), but the callback passed in has to be taken into account
+
+it depends on what's happening inside of a loop, for example
+                  
+                  
+O(log n) looping thru an array, adn every time you loop you cut the problem in half, or third (some fraction), the time is logarithmic, cut in half
+the time complexity increases at a fraction. better than linear time!
+  
+O(n log n) happens when you have a loop, you have a linear loop and also looping in and cutting it in half.
+tipo ter um loop que dentro dele tem um mergeSort (que cut in half)
+
+
+
+
+
+
+O(1) running a statement
+O(1) lookup in array
+O(log n) loop that cuts problem in half every iteration
+O(n) loop
+O(n^2) nested loops
+O(n^3) triple nested loop
