@@ -43,3 +43,16 @@ O(n^3) 3 triple nested loop
 
 
 be mindful of what's 'n' !!!
+
+
+
+Big O is THE WORST CASE SCENARIO -- Computer scientists are pessimist
+
+
+
+
+
+
+SPACE COMPLEXITY
+(the space it takes up in memory)
+if you're copying an array 5 times, than you have 5 arrays in your memory that's not good
