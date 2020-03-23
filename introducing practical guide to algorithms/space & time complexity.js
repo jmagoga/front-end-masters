@@ -38,5 +38,8 @@ O(1) running a statement
 O(1) lookup in array
 O(log n) loop that cuts problem in half every iteration
 O(n) loop
-O(n^2) nested loops
-O(n^3) triple nested loop
+O(n^2) 2 nested loops (bem diferente de 2n, que sao 2 loops NAO nested)
+O(n^3) 3 triple nested loop
+
+
+be mindful of what's 'n' !!!
