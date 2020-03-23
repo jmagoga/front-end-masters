@@ -56,3 +56,7 @@ Big O is THE WORST CASE SCENARIO -- Computer scientists are pessimist
 SPACE COMPLEXITY
 (the space it takes up in memory)
 if you're copying an array 5 times, than you have 5 arrays in your memory that's not good
+
+
+com str.length   o tempo é sempre constant, indiferente do tamanho da string. pq javascript sempre ta ligado no tamanho das coisas
+conforme a gente adicionar, ele vai, provavelmente, mudando uma variavel que cuida do tamanho...
