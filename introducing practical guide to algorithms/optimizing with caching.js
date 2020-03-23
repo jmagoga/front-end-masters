@@ -3,7 +3,7 @@
 const isUnique = (arr) => {
   let result = true
   
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) { //aqui loopamos um loop (nested loop). O(n^2), quadratic.
     for (let j = 0; j < arr.length;j++) {
       if (i !== j && arr[i] === arr[j]) {
         result = false
@@ -19,12 +19,13 @@ const isUnique = (arr) => {
   let result = true
   let breadcrumbs = {}
   
-  for (let i = 0; i < arr.length; i++) {    
-      if (breadcrumbs[arr[i]]) {
+  for (let i = 0; i < arr.length; i++) { //aqui loopamos uma só vez. O(n), linear   
+      if (breadcrumbs[arr[i]]) { //1. esse valor já existe lá no breadcrumbs? resultado é falso, array nao é unico
         result = false
+        return result
       }
       else {
-        breadcrumbs[arr[i]] = true
+        breadcrumbs[arr[i]] = true //2. se nao, adiciona ele no breadcrumbs como TRUE, q se nao no 'if' ele vai comprar com uma cois falsa. 
       }
     }
   }
