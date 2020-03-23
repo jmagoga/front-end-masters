@@ -14,3 +14,8 @@ SLOW (k^n) exponential
 
 ordem de time complexity
 (1), (log n), (ao quadrado N), (n), (n^2), (n^3), (n^n)
+
+
+shift(), unshift() --> linear. tu add uma coisa mas move todos os outros itens do array pro lado 'n' times.
+
+reduce is linear ('n', it's just a loop under the hood), but the callback passed in has to be taken into account
