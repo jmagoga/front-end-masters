@@ -1,7 +1,7 @@
 let tracker = 0
 const callMe = () => {
   tracker++
-  if (tracker === 3) {
+  if (tracker === 3) { //think of it as "just recurse 3 times and then return loops"
     return 'loops'
   }
   return callMe('anytime') //RETORNA o 'loops' lá da função qnd esta no stack com tracker === 3
