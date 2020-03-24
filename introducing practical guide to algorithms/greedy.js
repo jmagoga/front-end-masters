@@ -33,11 +33,10 @@ n recomendado usar greedy em entrevistas, ruim de provar qnd esta correto
 //makeChange brute force (https://frontendmasters.com/courses/practical-algorithms/brute-force/)
 let recursionCounter = 0
 let coins = [1 ,3 ,5] //n sei se ta certo
-const makeChange = (value, i) => {
-   recursionCounter++
+const makeChange = (value) => {
   if (value === 0) return 0 
   let minCoins;
-  coins.forEach((coin, i) => {
+  coins.forEach((coin) => {
     if (value - coin >= 0) {
       let currMinCoins = makeChange(value - coin, i)
       if (minCoins === undefined || currMinCoins < minCoins) {
