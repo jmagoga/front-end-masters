@@ -1,4 +1,5 @@
-//com recursion, sempre ter certeza de estarmos nos aproximando do 'base case'
+//com recursion, sempre ter certeza de estarmos nos aproximando do 'base case', trazer input mais proximo do base case
+//remember to return where appropriate (we might not want to lose our data as in the 2nd example below)
 
 let tracker = 0
 const callMe = () => {
