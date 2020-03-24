@@ -51,12 +51,12 @@ console.log(memoClosureTimes10(9))
 const memoizedClosureTimesM = (m) => {
   let cache = {}
   return (n) => {
-    if (n in cache) {
+    if (n in cache) { //1. important for very expensive function calls. speeds up time complexity!
     return `cached value of ${cache[n]}`
   }
   else {
-    let result = n * m
-    cache[n] = result
+    let result = n * m //2. if this was expensive, we wouldn't want to do it again with a result we already know the answer of
+    cache[n] = result 
     return `result ${result}`
   }
   }
@@ -66,3 +66,30 @@ const memoClosureTimesM = memoizedClosureTimesM(12)
 console.log(memoClosureTimesM(9)) //result 108
 console.log(memoClosureTimesM(10)) //result 120
 console.log(memoClosureTimesM(9)) //cached value of 108
+
+
+//generic memoize
+//memoization with closure and callback
+
+const times10 = num => num * 10
+
+const memoizedClosure = (callback) => {
+  let cache = {}
+  return (n) => {
+    if (n in cache) {
+    return `cached value of ${cache[n]}`
+  }
+  else {
+    let result = callback(n) //usando a função passada como callback
+    cache[n] = result
+    return `result ${result}`
+  }
+  }
+}
+
+const memoClosureTimes10 = memoizedClosure(times10)
+console.log(memoClosureTimes10(9)) //result 90
+console.log(memoClosureTimes10(10)) //result 100
+console.log(memoClosureTimes10(9)) //cached value of 90
+
+
