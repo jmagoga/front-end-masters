@@ -92,4 +92,30 @@ console.log(memoClosureTimes10(9)) //result 90
 console.log(memoClosureTimes10(10)) //result 100
 console.log(memoClosureTimes10(9)) //cached value of 90
 
+//MAS... e se quisessemos fazer mais generico, usando uma função que recebesse MAIS DO QUE 1 ARGUMENTO?
+//podemos usar '...args' com o spread, e nos outros lugares só 'args'
+
+//memoization with closure and callback
+
+const times10MinusWhatever = (num1, num2) => num1 * 10 - num2
+
+const memoizedClosure = (callback) => {
+  let cache = {}
+  return (...args) => { //recebe qqr numero de argumentos
+    if (args in cache) {
+    return `cached value of ${cache[args]}`
+  }
+  else {
+    let result = callback(...args) //usando QUALQUER função passada como callback, pois recebe qqr numero de argumentos
+    cache[args] = result
+    return `result ${result}`
+  }
+  }
+}
+
+const memoClosureTimes10minusNum = memoizedClosure(times10MinusWhatever)
+console.log(memoClosureTimes10minusNum(9, 10)) //result 80
+console.log(memoClosureTimes10minusNum(10, 50)) //result 50
+console.log(memoClosureTimes10minusNum(9, 10)) //cached value of 80
+
 
