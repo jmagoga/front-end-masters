@@ -1,4 +1,4 @@
-function wrappedFnLoop(start, end) {
+function wrappedFnLoop(start, end) { //it's a closure
   function recurse(i) {
     if (i < end) {
       recurse(i + 1)
