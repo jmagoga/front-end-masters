@@ -1,4 +1,4 @@
-//memoiation is the caching of the return value of a function.
+//memoiation is the caching of the return value of a function. This is basically a HASH TABLE
 
 const times10 = num => num * 10
 
