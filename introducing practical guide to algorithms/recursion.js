@@ -69,7 +69,12 @@ function computeFactorial(num) {
 
 console.log(computeFactorial(5))
 
+//factorial recursiva
+function factorial(n) {
+  return n === 1 ? 1 : n * factorial(n-1) //base case 1, pq 1 * tal coisa... se não faz n * n-1.. até que  chega no 1 (base case)
+}
 
+console.log(factorial(5)) //120
 
 
 
