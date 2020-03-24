@@ -26,7 +26,7 @@ console.log(memoTimes(9)) //cached value of 90
 
 
 const memoizedClosureTimes10 = () => {
-  let cache = {}
+  let cache = {} //we're making this private to this function. it's not available to the global scope
   return (n) => {
     if (n in cache) {
     return `cached value of ${cache[n]}`
