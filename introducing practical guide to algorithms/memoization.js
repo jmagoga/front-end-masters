@@ -24,6 +24,7 @@ console.log(memoTimes(9)) //cached value of 90
 //MEMOIZATION WITH CLOSURE
 //use a closure to return a function that you can call later
 
+
 const memoizedClosureTimes10 = () => {
   let cache = {}
   return (n) => {
@@ -38,4 +39,7 @@ const memoizedClosureTimes10 = () => {
   }
 }
 
-const memoClosureTimes10 = memoizedClosureTimes10()
+const memoClosureTimes10 = memoizedClosureTimes10() //fica o valor do que vem apos o return, MAS, ainda lembra do cache que está fora
+console.log(memoClosureTimes10(9))
+console.log(memoClosureTimes10(10))
+console.log(memoClosureTimes10(9))
