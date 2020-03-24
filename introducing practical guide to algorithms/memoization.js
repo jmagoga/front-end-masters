@@ -43,3 +43,26 @@ const memoClosureTimes10 = memoizedClosureTimes10() //fica o valor do que vem ap
 console.log(memoClosureTimes10(9))
 console.log(memoClosureTimes10(10))
 console.log(memoClosureTimes10(9))
+
+
+//tb podemos fazer o acima passando um argumento que é lembrado...
+
+
+const memoizedClosureTimesM = (m) => {
+  let cache = {}
+  return (n) => {
+    if (n in cache) {
+    return `cached value of ${cache[n]}`
+  }
+  else {
+    let result = n * m
+    cache[n] = result
+    return `result ${result}`
+  }
+  }
+}
+
+const memoClosureTimesM = memoizedClosureTimesM(12)
+console.log(memoClosureTimesM(9)) //result 108
+console.log(memoClosureTimesM(10)) //result 120
+console.log(memoClosureTimesM(9)) //cached value of 108
