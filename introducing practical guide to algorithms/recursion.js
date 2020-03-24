@@ -1,3 +1,5 @@
+//com recursion, sempre ter certeza de estarmos nos aproximando do 'base case'
+
 let tracker = 0
 const callMe = () => {
   tracker++
