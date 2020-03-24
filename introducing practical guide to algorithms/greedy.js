@@ -26,7 +26,12 @@ console.log(makeChange[5, 10, 25, 50], 50)
 
 n recomendado usar greedy em entrevistas, ruim de provar qnd esta correto
 
-//brute force, goes thru every single combination
+
+
+
+
+
+//brute force, goes thru every single combination and keeps track of the minimum
 
 //at every step figure out every different scenario
 
