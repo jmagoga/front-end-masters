@@ -55,3 +55,33 @@ console.log('-----------------------------')
 console.log(recursiveLoop(3)) //3, 2, 1, complete  //por causa do valor retornado, que só é mostrado se usarmos o console.log
 
 
+
+
+//FACTORIAL with a loop
+function computeFactorial(num) {
+  var result = 1
+  
+  for (let i = 2; i <= num; i++) { // '<=' LEMBRAR, que o número que foi input tb conta.
+    result *= i
+  }
+  return result
+}
+
+console.log(computeFactorial(5))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
