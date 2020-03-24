@@ -21,3 +21,15 @@ const callMe = () => {
 }
 
 console.log(callMe())
+
+//passing argument
+let tracker = 0
+const callMe = (arg) => {
+  tracker++
+  if (tracker === 3) {
+    return `loops ${arg}`
+  }
+  return callMe('anytime')
+}
+
+console.log(callMe()) //loops anytime
