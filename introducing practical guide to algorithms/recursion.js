@@ -36,3 +36,22 @@ const callMe = (arg) => {
 }
 
 console.log(callMe()) //loops anytime
+
+
+
+//recursive loop
+const recursiveLoop = (n) => {
+  console.log(n)
+  if (n <= 1) {
+    return 'complete'
+  }
+  else {
+    return recursiveLoop(n-1)
+  }
+} 
+
+recursiveLoop(3)// 3, 2, 1           //aqui não logamos o valor do return na tela.
+console.log('-----------------------------')
+console.log(recursiveLoop(3)) //3, 2, 1, complete  //por causa do valor retornado, que só é mostrado se usarmos o console.log
+
+
