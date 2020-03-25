@@ -16,7 +16,7 @@ const memo = callback => { //1. recebe callback
   }
 }
 
-const factorial = memo(
+const factorial = memo( //tem que passar algo para o memo em vez de x quando se chama isso p funcionar?
   (x) => {
     if (x === 0) {
       return 1
