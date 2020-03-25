@@ -15,6 +15,9 @@ const isUnique = (arr) => {
 
 //faster with caching
 
+
+//this below is a hash table!!!
+
 const isUnique = (arr) => {
   let result = true
   let breadcrumbs = {}
