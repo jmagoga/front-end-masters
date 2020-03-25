@@ -1,3 +1,5 @@
+//parar e pensar. não só ler
+
 //we expect the array to be sorted
 
 //break list in half everytime
