@@ -1,3 +1,5 @@
+//recursion makes a stack, think of the space complexity...
+
 class Queue {
   constructor() {
     this._storage = {}
