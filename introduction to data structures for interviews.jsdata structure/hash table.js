@@ -22,6 +22,12 @@ ex, 100 % 25 --> 0
 99 % 25 --> 24
 98 % 25 --> 23
 
+for the same string, you wanna have the same value everytime
+
+para add algo a uma hash table,  botamos O VALOR do que queremos adicionar. para fazer o LOOKUP, mesma coisa!!!
+  
+  
+
 
 
 
