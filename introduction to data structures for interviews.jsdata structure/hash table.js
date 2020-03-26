@@ -1,3 +1,5 @@
+fast look up ??? hash table!!!
+
 hash table is not ordered 
 
 good for fast lookups and keys that are flexible
@@ -26,10 +28,15 @@ for the same string, you wanna have the same value everytime
 
 para add algo a uma hash table,  botamos O VALOR do que queremos adicionar. para fazer o LOOKUP, mesma coisa!!!
   
-  
+IN REAL LIFE
+
+{}
+Map --> still have a key value pair, but any data type can be saved just like in a set. not only a string...
+Set --> just saves the property name (only the key, which can be string, object, whatever) (in a reguar object, everything gets stringified)
 
 
 
+what's the appropriate ds, can i just save functions? do I need a key value or just a key?
 
 
 
