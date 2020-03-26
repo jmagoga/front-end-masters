@@ -35,5 +35,7 @@ const linkedList = {
 in the head, it could be null or even point to the tail
 
 to change the pointer, just reassign it to other node
+                                
+points to another object, a 'node'
 
 use cases:
