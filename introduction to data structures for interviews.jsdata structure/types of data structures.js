@@ -13,3 +13,5 @@ we use them as they're really fast at what they're do.
 unshift is usually optimizeed in modern browsers, but they can be implemented with a linked list!
 
 example of a stack: a back button or undo button --> it'll pop off the most recent changes
+
+common interview question!!! implement a back button!!! USE A STACK!!!
