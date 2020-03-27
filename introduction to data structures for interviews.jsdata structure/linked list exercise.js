@@ -1,3 +1,5 @@
+//always hold reference to head and tail. you can only iterte back if it's a doubly linked list
+
 class LinkedList {
   
   constructor(value) {
@@ -26,14 +28,20 @@ class LinkedList {
     currentNode.next = null //we remove that node
     this.tail = currentNode //atualiza o tail para o penultimo node
   }
-  contains() { //linear
-    
+  
+  contains(value) { //linear //check for a value not a node
+    let currentNode = this.head
+    while (currentNode.value !== value) {  //when this condition is met we know it's the second to last node  //while it's not that, keep looping
+      currentNode = currentNode.next //just so we don't have an inifinite loop
+    }
+    return currentNode.value === value
   }
-  isHead() { //constant time
-    
+  
+  isHead(node) { //constant time
+    return node === this.head
   }
-  isTail() { //constant time
-    
+  isTail(node) { //constant time
+    return node === this.tail
   }
 }
 
