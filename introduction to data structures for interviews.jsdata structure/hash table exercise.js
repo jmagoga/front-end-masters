@@ -1,3 +1,5 @@
+//not implement hashtable on your own, use object, or Map or a Set
+
 class HashTable {
   constructor(size) {
     this._storage = [] //to implement an array within an array instead of object inside of object
