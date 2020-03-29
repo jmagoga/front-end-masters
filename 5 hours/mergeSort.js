@@ -135,3 +135,35 @@ function stitch(left, right) {
   
 
 console.log(mergeSort([12, 3, 1, 55, 5, 6, 22]))
+
+
+
+
+//revisao
+function mergeSort(arr) {
+  //base case
+  if (arr.length < 2) {  //RECURSION, don't forget the base case!!
+      return arr
+      }
+  
+  const length = arr.length
+  const middle = Math.floor(length / 2)
+  const left = arr.slice(0, middle)
+  const right = arr.slice(middle) //middle, length
+  
+  return stitch(mergeSort(left), mergeSort(right))
+}
+
+function stitch(left, right) {
+  let result = []
+  while (left.length && right.length) {
+    if (left[0] < right[0]) {
+      result.push(left.shift())
+    } else {
+      result.push(right.shift())
+    }
+  }
+  return [...result, ...left, ...right]
+}
+
+console.log(mergeSort([1 ,23, 4, 3, 7, 55, 99, 64]))
