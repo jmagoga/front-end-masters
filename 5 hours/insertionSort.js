@@ -32,3 +32,20 @@ function insertionSort(arr) {
 }
 
 console.log(insertionSort([10, 2, 11, 55, 23]))
+
+
+
+//revisao
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) { //i=1, j=0, arr[i] < arr[j], sPlice(i, 1), arr.splice(j, 0, spliced[0])
+    for (let j = 0; j < i; j++) {
+      if (arr[i] < arr[j]) {
+        const spliced = arr.splice(i, 1)
+        arr.splice(j, 0, spliced[0])
+      }
+    }
+  }
+  return arr
+}
+
+console.log(insertionSort([1 ,23, 4, 3, 7, 55, 99, 64]))
