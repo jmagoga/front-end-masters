@@ -62,3 +62,28 @@ console.log(quickSort([2, 4, 1, 7, 5, 84, 33, 55, 45]))
 //mas eh tb um problema se tu tem
 [1, 2, 1, 3, 1]
          aqui nao muda nada e não adianta nada (mas tem uma chance menor!!!)
+
+
+
+
+//revisao
+function quickSort(arr) {
+  //base case
+  if (arr.length <= 1) { //<=1
+    return arr
+  }
+  const pivot = arr[arr.length-1]
+  const left = []
+  const right = []
+  
+  for (let i = 0; i < arr.length-1; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i])
+    } else {
+      right.push(arr[i])
+    }
+  }
+  return [...quickSort(left), pivot, ...quickSort(right)] //recursa aqui no return mesmo
+}
+
+console.log(quickSort([1 ,23, 4, 3, 7, 55, 99, 64]))
