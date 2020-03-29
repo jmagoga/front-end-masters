@@ -63,3 +63,47 @@ console.log(teste)//{"length":3,   "data":{"0":"Julio","1":"Hermes","2":"Heron"}
 teste.delete(0)
 console.log(teste)//{"length":2,   "data":{"0":"Hermes","1":"Heron"}}
 
+
+
+//revisao
+class LinkedList {
+  constructor() {
+    this.storage = {}
+    this.length = 0
+  }
+  push(value) {
+    this.storage[this.length] = value
+    this.length++
+  }
+  pop() {
+    const ans = this.storage[this.length-1]
+    delete this.storage[this.length-1]
+    this.length--
+    return ans
+  }
+  get(index) {
+    return this.storage[index]
+  }
+  delete(index) {
+   const ans = this.storage[index]
+   this._collapse(index)
+   return ans
+  }
+  _collapse(index) {
+    for (let i = index; i < this.length; i++) { //i < this.length
+      this.storage[i] = this.storage[i+1] //transforma aquele q vai ser deletado no proximo
+    }
+    delete this.storage[this.length-1] //deleta o ultimo ja que todos se moveram para a esquerda 1 casa
+    this.length--
+  }
+}
+
+const list = new LinkedList
+list.push('a')
+list.push('b')
+list.push('c')
+list.push('d')
+list.pop()
+console.log(list)
+console.log(list.delete(2))
+console.log(list)
