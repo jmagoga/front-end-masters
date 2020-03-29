@@ -66,7 +66,7 @@ console.log(teste)//{"length":2,   "data":{"0":"Hermes","1":"Heron"}}
 
 
 //revisao
-class LinkedList {
+class ArrayList {
   constructor() {
     this.storage = {}
     this.length = 0
@@ -98,7 +98,7 @@ class LinkedList {
   }
 }
 
-const list = new LinkedList
+const list = new ArrayList
 list.push('a')
 list.push('b')
 list.push('c')
