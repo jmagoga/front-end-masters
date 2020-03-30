@@ -1,3 +1,5 @@
+//acho que LinkedList vai ser mais facil implementar a da Bianca Gandolfo (do outro curso)
+
 tem um head, dps aponta e aopnta e aponta e chega no tail
 
 cada item na lista tem 2 coisas, o valor e o 'next', que é para onde aponta.
