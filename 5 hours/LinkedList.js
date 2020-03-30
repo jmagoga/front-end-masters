@@ -88,3 +88,54 @@ class Node {
   }
   
 }
+
+     
+     
+     
+     
+//revisao TBC
+     
+class LinkedList {
+  constructor() {
+    this.length = 0
+    this.head = null
+    this.tail = null
+  }
+  
+  push(value) {
+    const node = new Node(value)
+    this.length++
+    if (!this.head) { //((1)). se nao tem head, o novo node vira o head e tb...
+      this.head = node
+    } else { //((3)).mas se ja tem head, o next do ATUAL tail aponta para o o novo node
+      this.tail.next = node //transforma o next do atual tail no novo node     //isso ja vai existir se tivermos cabeça.
+    }
+    this.tail = node //agora esse é o novo tail ...((2)). vira o rabo    ((4)). que é agora o novo tail
+  }
+  
+  pop() {
+    return this._delete(this.length-2)
+  }
+  
+  _delete(index) {
+      if (index === 0) {
+        const head = this.head
+        if (head) {
+          this.head = head.next
+        } else {
+          this.head = this.tail = null
+        }
+        this.length--
+        return head.value
+      }
+    //IMPLEMENtar fiND ANTES De COMEÇAR AQUI
+  }
+  
+}
+
+class Node {
+  constructor(value) {
+    this.value = value
+    this.next = null
+  }
+}
