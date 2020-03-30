@@ -42,6 +42,25 @@ const isUnique = (arr) => {
 //REVISAO
 
 function isUnique(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j] && i !== j) { //i !== j ----> para não comparar o número com ele mesmo
+        return false
+      }
+    }
+  }
+  return true
+}
+
+console.log(isUnique([1, 2, 3, 4]))
+console.log(isUnique([1, 2, 3, 1]))
+
+
+
+
+
+
+function isUnique(arr) {
   let result = true
   const breadcrumbs = {}
   for (let i=0; i < arr.length; i++) {
