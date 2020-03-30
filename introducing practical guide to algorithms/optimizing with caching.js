@@ -34,3 +34,25 @@ const isUnique = (arr) => {
   }
   return result
 }
+
+
+
+
+
+//REVISAO
+
+function isUnique(arr) {
+  let result = true
+  const breadcrumbs = {}
+  for (let i=0; i < arr.length; i++) {
+    if (breadcrumbs[arr[i]]) {
+      result = false
+      return result
+    }
+    breadcrumbs[arr[i]] = true //assim que se adiciona algo a um objeto ---> OBJETO[*COISA A ADICIONAR*]
+  }
+  return result
+}
+
+console.log(isUnique([1, 2, 3, 4, 5])) //true
+console.log(isUnique([1, 2, 3, 4, 1])) //false
