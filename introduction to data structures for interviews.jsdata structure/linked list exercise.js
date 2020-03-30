@@ -53,3 +53,65 @@ list.insert(3)
 console.log(list)
 list.removeTail()
 console.log(list)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//revisao
+
+
+class LinkedList {
+  constructor(value) {
+    this.head = {value, next: null}
+    this.tail = this.head
+  }
+
+  insert(value) {
+    const node = {value, next: null}
+    this.tail.next = node
+    this.tail = node
+  }
+  removeTail() {
+    let current = this.head
+    while (current.next !== this.tail) {
+      current = current.next
+    }
+    current.next = null
+    this.tail = current
+  }
+  contains(value) {
+    let current = this.head
+    while (value !== current.value) {
+      current = current.next
+    }
+    return current.value === value
+  }
+  isHead(node) {
+    return value === this.head
+  }
+  isTail(node) {
+    return value === this.tail
+  }
+
+}
+
+const list = new LinkedList(1) //not taking any value (nothing in the constructor) //should I initiate it with a value or empty
+console.log(list)
+list.insert(2)
+console.log(list)
+list.insert(3)
+console.log('list contains 3: ' + list.contains(3))
+console.log(list)
+list.removeTail()
+console.log(list)
