@@ -26,3 +26,32 @@ const binarySearch = (list, numToFind) => {
 }
 
 console.log(binarySearch([0, 1, 2, 3, 4, 5], 3)) // 3 (que eh o index)
+
+
+
+
+
+
+//REVISAO
+
+function binarySearch(list, num) { //assumption: list is already sorted
+  let max = list.length-1
+  let min = 0
+  let guess
+  
+  while(min <= max) { //<=
+    guess = Math.floor((min + max) / 2) //guess vira sempre o número do meio da lista, por isso dessa divisao
+    if (list[guess] === num) {
+      return `number is at index ${guess}` 
+    } else {
+      if (list[guess] < num) { //se for MENOR, muda o MIN
+        min = guess +1 //+1 para nao incluir o guess
+      } else { //se for MAIOR, muda o MAX
+        max = guess -1 //-1 para não incluir o guess
+      }
+    }
+  }
+  return 'number not in list'
+}
+
+console.log(binarySearch([1, 2, 3, 4, 11, 15, 16 ,17 ,18], 55))
