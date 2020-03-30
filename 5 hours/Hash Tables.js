@@ -47,3 +47,16 @@ function hash(string) {
 //talvez poderia ser uma linked list ali dentro da hash table
   //ai usa 'chaining', qnd tem o mesmo indice, so usa um pointer para o next.
 
+
+  
+  
+  //playing with the hash function
+    function hash(input, max) {
+    let num = 0;
+    for (let i = 0; i < input.length; i++) {
+        num += input.charCodeAt(i) * (i ? i : 1)
+    }
+    return num % max;    
+  }
+
+console.log(hash('J', 255))
