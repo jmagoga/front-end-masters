@@ -119,3 +119,90 @@ console.log(memoClosureTimes10minusNum(10, 50)) //result 50
 console.log(memoClosureTimes10minusNum(9, 10)) //cached value of 80
 
 
+
+
+
+
+
+
+
+
+
+
+//REVISAO
+
+const times10 = num => num * 10
+const times30 = num => num * 30
+
+const cache = {}
+
+const memoize = (n, fn=times10) => {
+  if (n in cache) { //causa problemas
+    return `cached value of ${n} ${fn.name} = ${cache[n]}`
+  }
+  else {
+    let result = fn(n)
+    cache[n] = result
+    return `${n} ${fn.name} = ${result}`
+  }
+}
+
+console.log(memoize(5, times10))
+console.log(memoize(13, times30))
+console.log(memoize(5))
+console.log(memoize(13))
+console.log(memoize(5, times30))
+
+//memo with closure
+
+const times10 = num => num * 10
+const times30 = num => num * 30
+
+const memoize = (fn) => {
+  let cache = {}
+  return (n) => {
+  if (n in cache) {
+    return `cached value of ${n} ${fn.name} = ${cache[n]}`
+  }
+  else {
+    let result = fn(n)
+    cache[n] = result
+    return `${n} ${fn.name} = ${result}`
+  }
+  }
+}
+
+const timesTHIRTY = memoize(times30)
+console.log(timesTHIRTY(5))
+const timesTEN = memoize(times10)
+console.log(timesTEN(5))
+
+
+
+
+//com multiplos argumentos
+const times10 = num => num * 10
+const times30 = num => num * 30
+const timesWhatever = (num1, num2) => num1 * num2
+
+const memoize = (fn) => {
+  let cache = {}
+  return (...args) => {
+  if (args in cache) {
+    return `cached value of ${args} ${fn.name} = ${cache[args]}`
+  }
+  else {
+    let result = fn(args)
+    cache[args] = result
+    return `${args} ${fn.name} = ${result}`
+  }
+  }
+}
+
+const timesTHIRTY = memoize(timesWhatever)
+console.log(timesWhatever(5, 11))
+const timesTEN = memoize(times10)
+console.log(timesTEN(5))
+
+
+
