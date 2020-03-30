@@ -25,7 +25,7 @@ class HashTableSet {
   hash(input, max) {
     let num = 0
     for (let i = 0; i < input.length; i++){
-        num += input.charCodeAt * i
+        num += input.charCodeAt(i) * i     //input.charCodeAt(i) 
     }
     return num % max
   }
