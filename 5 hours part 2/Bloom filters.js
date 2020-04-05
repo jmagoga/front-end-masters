@@ -2,6 +2,17 @@
 
 //answers: no and maybe ... ?
 
+//you can never remove from a Bloom filter
+
+//you need hundredrs or thousands of on indexes to a bloom filter
+//therefore memory has to be allocated upfront.
+
+//if you run stuff thru more hashing functions, you get less false positives... but you'll need a bigger array
+
+//use a hash function that's fast,  not stuff like SHA or MD5 (designed to be slow, criptograhpic)
+
+//XXJS -- hashing library for hashing functions... !!!!!!
+
 //they're a Set or Collection (a morphous cloud of data)
 
 //fast look up... but won't tell you if it's definitely in the Set. 'maybe' -- lose the certainty
