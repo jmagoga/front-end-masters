@@ -1,1 +1,50 @@
-1
+//data structure
+
+//answers: no and maybe ... ?
+
+//they're a Set or Collection (a morphous cloud of data)
+
+//fast look up... but won't tell you if it's definitely in the Set. 'maybe' -- lose the certainty
+
+//very compact in memory and fast to look up
+
+//Medium uses bloom filters -- (have they read this article before or not?) to show something the person has not read, and not to show something they have already read
+
+//this person might have this article... when you have a tolerance for false negatives but no tolerance for false positives
+
+//two different hashing functions
+
+//0 represents falses, make a bloom filter out of that, having two *different* hashing functions (for the example, TYPICALLY MORE)
+
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+"Brian" --> ran throught TWO(2) different hashing functions
+hashFunc1 = 1
+hashFunc2 = 4
+
+[0, 1, 0, 0, 1, 0, 0, 0, 0, 0]
+
+//then we ask 'is Brina in this Bloom set' we run Brian thru the same hashing functions, and check if number 1 is in index 1 or 4
+//it finds the 1 in there, and the answers are 'maybe'
+
+"Sarah" -->
+hashFunc1 = 0
+hashFunc2 = 4
+//checks the bloom filter now... Sarah is not at '0', so she's not in there
+
+//if afterwars we add Sarah
+
+[1, 1, 0, 0, 1, 0, 0, 0, 0, 0]
+
+//and later check for Sherley
+hashFunc1 = 0
+hashFunc2 = 1
+//check in the array and they are flipped!!!
+[1, 1, 0, 0, 1, 0, 0, 0, 0, 0]
+ 0  1  --> are flipped!!! so it 'may be' in there,
+//in Medium, if Shirley is an article, it'll be shown that the article might has been read. therefore, not shown to user.
+
+
+
+
+
