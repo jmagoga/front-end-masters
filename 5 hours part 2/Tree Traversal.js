@@ -142,6 +142,9 @@ it('preorderTraverse', () => {
 
 
 //Breadth first
+//the gist of when you use them is that you know the answer for what you're looking for is "closer" to the root node 
+//as opposed to far away when you would use depth-first. Again, it's all trade-offs.
+
 ///want to stay close to the root node (as opposed to depth first)
 //doesn't make much sense to use it in a binary search tree
 
