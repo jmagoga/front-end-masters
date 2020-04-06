@@ -1,5 +1,7 @@
 //Depth first traversal
 
+//get as far away from the root node as possible as quickly as possible
+
 //if you want a sorted list out of a binary search tree (BST) then you use an inorder traversal
 
 //to create a deep copy, use a pre ordered traversal
