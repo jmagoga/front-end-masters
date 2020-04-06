@@ -88,3 +88,88 @@ it('preorderTraverse', () => {
     expect(postorderTraverse(tree, [])).toEqual([2, 3, 6, 7, 5, 4, 9, 11, 10, 12, 8]);
   });
 });
+
+
+//Breadth first
+///want to stay close to the root node (as opposed to depth first)
+//doesn't make much sense to use it in a binary search tree
+
+//one layer at a time, from left to right
+
+//a queue is going to be used
+
+//add 8, process that, add 3 and 10 in there, 
+//then im going to dequeue the next one which's 3, then add one and six to othe queue. 
+//process 3, and then dequeue the next thing
+//next thing in the queue is 10
+//olhar imagem aqui https://btholt.github.io/four-semesters-of-cs-part-two/tree-traversals
+//https://frontendmasters.com/courses/computer-science-2/breadth-first-traversal-solution/
+
+//iterative way of doing this
+if (!queue || !queue.length) return array
+
+const breadthFirstTraverse = (queue, array) => {
+  while (queue.length) {
+    const node = queue.shift();
+    array.push(node.value)
+    if (node.left) queue.push(node.left)
+    if (node.right) queue.push(node.right)
+  }
+  return array
+}
+
+//recursive way of doing this
+const recursiveBreadthFirstTraversal = (queue, array) => {
+  if (!queue.length) return array
+  const node = queue.shift()
+  array.push(node.value)
+  if (node.left) queue.push(node.left)
+  if (node.right) queue.push(node.right)
+  return recursiveBreadthFirstTraversal(queue, array)
+}
+
+
+const tree = {
+    value: "A",
+    left: {
+      value: "B",
+      left: {
+        value: "D",
+        left: {
+          value: "G",
+          left: null,
+          right: null
+        },
+        right: null
+      },
+      right: {
+        value: "E",
+        left: null,
+        right: {
+          value: "H",
+          left: {
+            value: "K",
+            left: null,
+            right: null
+          }
+        }
+      }
+    },
+    right: {
+      value: "C",
+      left: {
+        value: "F",
+        left: {
+          value: "I",
+          left: null,
+          right: null
+        },
+        right: {
+          value: "J",
+          left: null,
+          right: null
+        }
+      },
+      right: null
+    }
+  };
