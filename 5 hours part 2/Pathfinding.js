@@ -1,1 +1,3 @@
-1
+//investigate A*
+
+//Djikstra algorithm for pathfinding
