@@ -40,6 +40,7 @@
 //So on and so forth.
 //We end up with the array of [8, 3, 1, 6, 4, 7, 10, 14, 13]. This is called preorder traversal.
 
+//adds every element from the tree (node) to the array in the order specified in the function body
 const preorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaixo, array eh passado um vazio
   if (!node) return array
   array.push(node.value)//process the node
@@ -65,7 +66,7 @@ const preorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaix
 // postorder
 [1, 4, 7, 6, 3, 13, 14, 10, 8] //first add all chidren then yourself (that's why 8 is added last, it's the root)
 
-
+//adds every element from the tree (node) to the array in the order specified in the function body
 const inorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaixo, array eh passado um vazio
   if (!node) return array
   array = inorderTraverse(node.left, array) //process left tree
@@ -74,6 +75,7 @@ const inorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaixo
   return array
 }
 
+//adds every element from the tree (node) to the array in the order specified in the function body
 const postorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaixo, array eh passado um vazio
   if (!node) return array
   array = postorderTraverse(node.left, array) //process left tree
