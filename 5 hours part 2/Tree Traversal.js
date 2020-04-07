@@ -176,10 +176,10 @@ if (!queue || !queue.length) return array
 
 const breadthFirstTraverse = (queue, array) => {
   while (queue.length) {
-    const node = queue.shift();
-    array.push(node.value)
-    if (node.left) queue.push(node.left)
-    if (node.right) queue.push(node.right)
+    const node = queue.shift(); //tira a primeira coisa la do queue (q eh passado tree n começo)
+    array.push(node.value) //poe o valor do que foi tirado de la, no array
+    if (node.left) queue.push(node.left) //se aquele node tem um left, poe n QUEUE, nao no array
+    if (node.right) queue.push(node.right) //se o node tem um right, poe na QUEUE, n no array. depos tira a primeira coisa la da queue de novo... e repete.
   }
   return array
 }
