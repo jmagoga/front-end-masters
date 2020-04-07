@@ -40,7 +40,7 @@
 //So on and so forth.
 //We end up with the array of [8, 3, 1, 6, 4, 7, 10, 14, 13]. This is called preorder traversal.
 
-const preorderTraverse = (node, array) => {
+const preorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaixo, array eh passado um vazio
   if (!node) return array
   array.push(node.value)//process the node
   array = preorderTraverse(node.left, array) //process left tree
@@ -66,7 +66,7 @@ const preorderTraverse = (node, array) => {
 [1, 4, 7, 6, 3, 13, 14, 10, 8] //first add all chidren then yourself (that's why 8 is added last, it's the root)
 
 
-const inorderTraverse = (node, array) => {
+const inorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaixo, array eh passado um vazio
   if (!node) return array
   array = inorderTraverse(node.left, array) //process left tree
   array.push(node.value)//process the node
@@ -74,7 +74,7 @@ const inorderTraverse = (node, array) => {
   return array
 }
 
-const postorderTraverse = (node, array) => {
+const postorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaixo, array eh passado um vazio
   if (!node) return array
   array = postorderTraverse(node.left, array) //process left tree
   array = postorderTraverse(node.right, array) //process right tree
