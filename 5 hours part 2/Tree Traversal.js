@@ -46,7 +46,7 @@ const preorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaix
   array.push(node.value)//process the node
   array = preorderTraverse(node.left, array) //process left tree
   array = preorderTraverse(node.right, array) //process right tree
-  return array
+  return array //lembrar de retornar o array
 }
 
 
@@ -72,7 +72,7 @@ const inorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debaixo
   array = inorderTraverse(node.left, array) //process left tree
   array.push(node.value)//process the node
   array = inorderTraverse(node.right, array) //process right tree
-  return array
+  return array //lembrar de retornar o array
 }
 
 //adds every element from the tree (node) to the array in the order specified in the function body
@@ -81,7 +81,7 @@ const postorderTraverse = (node, array) => { //o node aqui é o 'tree' lá debai
   array = postorderTraverse(node.left, array) //process left tree
   array = postorderTraverse(node.right, array) //process right tree
   array.push(node.value)//process the node
-  return array
+  return array //lembrar de retornar o array
 }
 
 
