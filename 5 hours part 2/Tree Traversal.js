@@ -54,6 +54,7 @@ const preorderTraverse = (node, array) => {
 //In inorder traversal, you first recursively call the method on the left tree, then process the node, and then call the method on the right tree.
 
 //Postorder traversal, as you have guessed, you recursively call the method on the left subtree, then the left subtree, then you process the node. The results of these are as follows:
+//in POSTORDER: first add all chidren then yourself
 
 // preorder
 [8, 3, 1, 6, 4, 7, 10, 14, 13]
@@ -62,7 +63,7 @@ const preorderTraverse = (node, array) => {
 [1, 3, 5, 6, 7, 8, 10, 13, 14]
 
 // postorder
-[1, 4, 7, 6, 3, 13, 14, 10, 8]
+[1, 4, 7, 6, 3, 13, 14, 10, 8] //first add all chidren then yourself (that's why 8 is added last, it's the root)
 
 
 const inorderTraverse = (node, array) => {
