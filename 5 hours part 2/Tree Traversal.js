@@ -239,3 +239,15 @@ const tree = {
       right: null
     }
   };
+
+
+//review breadth first iterative way
+function breadth(queue, array) {
+  while (queue.length) {
+    const node = queue.shift()
+    array.push(node)
+    if (node.left) queue.push(node.left) //ai segue em ordem para breadth (devagar longe do topo, camada por camada, sem descer tudo antes)
+    if (node.right) queue.push(node.right)
+  }
+  return array
+}
