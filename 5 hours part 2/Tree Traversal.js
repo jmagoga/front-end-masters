@@ -244,7 +244,7 @@ const tree = {
 //review breadth first iterative way
 function breadth(queue, array) {
   while (queue.length) {
-    const node = queue.shift()
+    const node = queue.shift() //tira a primeira coisa do array, que na segunda iteração, serao os dois filhos do root node, ai pega o left primeiro
     array.push(node)
     if (node.left) queue.push(node.left) //ai segue em ordem para breadth (devagar longe do topo, camada por camada, sem descer tudo antes)
     if (node.right) queue.push(node.right)
