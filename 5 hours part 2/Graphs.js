@@ -19,7 +19,7 @@ effectively limiting how many levels down it goes, or how many degrees of separa
 
 const findMostCommonTitle = (myId, getUser, degreesOfSeparation) => {
   let queue = [myId]; //ja add minha id na fila
-  const seen = new Set(); //keep track of users I've crawled before and not add them to my total the second time. (Set n repete)
+  const seen = new Set(); //keep track of users I've crawled before and not add them to my total the second time. (Set n repete) -- throw ids here so they're not processed again.
   const jobs = {}; //objeto com os trabalhos
   
   for (let i = 0; i <= degreesOfSeparation; i++) { //até que nivel vamos loopar
@@ -27,12 +27,12 @@ const findMostCommonTitle = (myId, getUser, degreesOfSeparation) => {
       .filter((id) => !seen.has(id)) //se a id nao esta na queue,
       .map(getUser) //retorna o usuario (em forma de objeto)
       .map(user => { //pra cada usuário,
-        jobs[user.title] = jobs[user.title] ? jobs[user.title] + 1 : 1; //adiciona o title ao objeto 'jobs' e soma 1, contando
+        jobs[user.title] = jobs[user.title] ? jobs[user.title] + 1 : 1; //adiciona o title ao objeto 'jobs' e soma 1, contando ---IF I HAVEN'T seen this title before, I add it to jobs, otherwise I increase it by one.
         seen.add(user.id) //e adiciona esse 'id' ao 'seen'
         return user; //ai retorna o usuário.. o abaixo continua... aqui so retorna o fim dessa função aqui.
       })
-      .map((user) => user.connections) //ai p cada user, retorna as conexões dele
-      .reduce((acc, users) => acc.concat(users), []) //e... ???
+      .map((user) => user.connections) //ai p cada user, retorna as conexões dele //transform from map of numbers to a map of connections
+      .reduce((acc, users) => acc.concat(users), []) //faz a mesma coisa que o .flat !!! transforma em um único array
   }
   return Object.keys(jobs) //retorna os keys do que tem la em jobs (os números ?)
     .map((job) => [job, jobs[job]]) //e pra cada job, fazum array com o job e... ???
