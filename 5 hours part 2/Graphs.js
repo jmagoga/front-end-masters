@@ -18,29 +18,29 @@ effectively limiting how many levels down it goes, or how many degrees of separa
 */
 
 const findMostCommonTitle = (myId, getUser, degreesOfSeparation) => {
-  let queue = [myId];
-  const seen = new Set();
-  const jobs = {};
+  let queue = [myId]; //ja add minha id na fila
+  const seen = new Set(); //keep track of users I've crawled before and not add them to my total the second time. (Set n repete)
+  const jobs = {}; //objeto com os trabalhos
   
-  for (let i = 0; i <= degreesOfSeparation; i++) {
-    queue = queue
-      .filter((id) => !seen.has(id))
-      .map(getUser)
-      .map(user => {
-        jobs[user.title] = jobs[user.title] ? jobs[user.title] + 1 : 1;
-        seen.add(user.id)
-        return user;
+  for (let i = 0; i <= degreesOfSeparation; i++) { //até que nivel vamos loopar
+    queue = queue //a queue atual é um array com minha id nele '[11]', por exemplo
+      .filter((id) => !seen.has(id)) //se a id nao esta na queue,
+      .map(getUser) //retorna o usuario (em forma de objeto)
+      .map(user => { //pra cada usuário,
+        jobs[user.title] = jobs[user.title] ? jobs[user.title] + 1 : 1; //adiciona o title ao objeto 'jobs' e soma 1, contando
+        seen.add(user.id) //e adiciona esse 'id' ao 'seen'
+        return user; //ai retorna o usuário.. o abaixo continua... aqui so retorna o fim dessa função aqui.
       })
-      .map((user) => user.connections)
-      .reduce((acc, users) => acc.concat(users), [])
+      .map((user) => user.connections) //ai p cada user, retorna as conexões dele
+      .reduce((acc, users) => acc.concat(users), []) //e... ???
   }
-  return Object.keys(jobs)
-    .map((job) => [job, jobs[job]])
+  return Object.keys(jobs) //retorna os keys do que tem la em jobs (os números ?)
+    .map((job) => [job, jobs[job]]) //e pra cada job, fazum array com o job e... ???
     .sort((a, b) => {
       if (a[1] > b[1]) return -1;
-      if (a[1] < b[1]) return 1;
+      if (a[1] < b[1]) return 1;      //ordena tudo
       return 0;
-    })[0][0]
+    })[0][0] //deve retornar o titulo de trabalho mais comum.
 }
 
 // unit tests
