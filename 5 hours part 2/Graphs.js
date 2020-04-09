@@ -34,13 +34,13 @@ const findMostCommonTitle = (myId, getUser, degreesOfSeparation) => {
       .map((user) => user.connections) //ai p cada user, retorna as conexões dele //transform from map of numbers to a map of connections
       .reduce((acc, users) => acc.concat(users), []) //faz a mesma coisa que o .flat !!! transforma em um único array
   }
-  return Object.keys(jobs) //retorna os keys do que tem la em jobs (os números ?)
-    .map((job) => [job, jobs[job]]) //e pra cada job, fazum array com o job e... ???
+  return Object.keys(jobs) //retorna os keys do que tem la em jobs (os números ?) RETORNA ARRAY DE JOB TITLES
+    .map((job) => [job, jobs[job]]) //e pra cada job, fazum array com o job e... ??? TUPLE, array of two , JOB TITLE and HOW MANY TIMES I SAW IT, like ['dev', 50]     
     .sort((a, b) => {
       if (a[1] > b[1]) return -1;
       if (a[1] < b[1]) return 1;      //ordena tudo
       return 0;
-    })[0][0] //deve retornar o titulo de trabalho mais comum.
+    })[0][0] //deve retornar o titulo de trabalho mais comum. ['dev', 10] -- [0][0] --> 'dev', que é o que queremos
 }
 
 // unit tests
