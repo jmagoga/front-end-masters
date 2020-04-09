@@ -1,5 +1,10 @@
 //copiado do link do Holt
 
+ keep track of users I've crawled before and not add them to my total the second time.
+
+Instead of letting breadth-first traversal run to completion, we'll just limit how many times that outer loop runs,
+effectively limiting how many levels down it goes, or how many degrees of separation!
+
 // you work for a professional social network. in this social network, a professional
 // can follow other people to see their updates (think Twitter for professionals.)
 // write a function that finds the job `title` that shows up most frequently given
