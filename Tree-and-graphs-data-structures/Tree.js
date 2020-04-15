@@ -20,3 +20,20 @@ const myTree = new Tree(1)
 //}
 const myTree2 = myTree.insertChild(2)
 const myTree2.insertChild(3) //inserindo dentro da tree dentro da tree (2 níveis abaixo)
+
+
+
+//chatbot
+class Tree {
+  constructor(question) //the value we're storing. a name, number...
+  this.question = question
+  this.yes = null //each node has children
+  this.no = null
+  
+
+  insertChild(question, side) { //can also pass a node here (which is a Tree already)
+    const newQuestion = new Tree(question)
+    this[side] = newQuestion
+    return newQuestion //not really needed. but it depends on what you want your API to do
+  }
+}
