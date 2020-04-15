@@ -37,3 +37,19 @@ class Tree {
     return newQuestion //not really needed. but it depends on what you want your API to do
   }
 }
+
+
+//traversing a tree
+let mother = {name: "Ashleigh"}
+const son =  {name: "Sami"}
+const daughter = {name: "Alex"}
+mother = {
+ name = "Ashleigh",
+ children = [son, daughter],
+}
+
+function traverse(tree) { //if it's only one level, we just loop over it
+  if(tree.children) {
+    tree.children.forEach(child => console.log(child.name))
+  }
+}
