@@ -53,3 +53,26 @@ function traverse(tree) { //if it's only one level, we just loop over it
     tree.children.forEach(child => console.log(child.name))
   }
 }
+
+
+
+//traversing nested trees
+const family = {
+  name: "Ash",
+  children: [{
+    name: 'Bowser',
+    children: [{
+      name: 'Picles',
+    }],
+  }],
+  name: "Alex",
+}
+
+function traverse(tree) { 
+  console.log(tree.name) //1. Ash, 2. Bowser, 3. Picles,   -->> na verdade da Alex, Bowser, Picles.
+  tree.children.forEach(child => traverse(child))
+}
+
+traverse(family)
+  
+  
