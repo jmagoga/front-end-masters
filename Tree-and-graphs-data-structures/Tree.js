@@ -117,8 +117,19 @@ class BinaryTree {
   //mesmo que fazer:
   // if (this.value === value) return true 
   //   return (this.left && this.left.contains(value) ? true : false) || (this.right && this.right.contains(value) ? true : false)
+  
+  //count recommendations
+  countReccos(node) {
+    if (node === null) return 0
+  //check if these are leaves(no children)
+    if (!node.yes && !node.no) {
+      return 1 //if node has been found
+    }
+    //otherwise keep traversing
+    return countReccos(node.yes) + countReccos(node.no)
+  }
 }
 
 
-  
+ 
   
