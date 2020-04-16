@@ -130,6 +130,12 @@ class BinaryTree {
   }
 }
 
+//insert --> linear
+//count --> linear
+//traverse --> linear
 
+//PRE order: node then children, starting left
+//IN order: left child recursively, node, right child
+//POST order: children recursively, then node
  
   
