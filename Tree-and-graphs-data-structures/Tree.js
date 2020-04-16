@@ -74,5 +74,51 @@ function traverse(tree) {
 }
 
 traverse(family)
+
+
+
+
+
+//binary tree
+
+//yes e no nesse caso podem ser conhecidos como left e right
+//aqui é um chatbot que tem, dentro do yes or no, uma question e um yes or no.
+const chatBot = {
+  question: 'Do you feel like cooking?'
+  yes: {
+    question: 'Do you have milk?',
+    yes: <question>,
+    no: <question>
+  }
+  no: {
+    question: 'Do you have toast?',
+    yes: <question>,
+    no: <question>  
+  }
+}
+
+class BinaryTree {
+  constructor(question){
+    this.question = question
+    this.yes = null
+    this.no = null
+  }
+  
+  traverse(func) {
+    func(this.question)
+    if (this.yes) traverse(func)
+    if (this.no) traverse(func)
+  }
+  
+  contains(question) {
+    if (this.question === question) return true 
+    return (this.yes && this.yes.contains(question) ? true : false) || (this.no && this.no.contains(question) ? true : false)
+  }
+  //mesmo que fazer:
+  // if (this.value === value) return true 
+  //   return (this.left && this.left.contains(value) ? true : false) || (this.right && this.right.contains(value) ? true : false)
+}
+
+
   
   
