@@ -12,3 +12,8 @@
 
 
 //1 is an edge, 0 is the lack of an edge
+
+functin addEdge(v1, v2) {
+  adjMatrix[v1][v2] = 1
+  adjMatrix[v2][v1] = 1
+}
