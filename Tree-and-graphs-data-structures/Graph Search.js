@@ -18,7 +18,7 @@ class Graph {
     
     while (nodeStack.length) {
       //we get the current node and all of its neighbors
-      const current = nodeStack.pop()
+      const current = nodeStack.pop() //removes the last item in     *****
       const neighbors = this.adjList[current]
       //and we log the current node
       func(current)
@@ -41,7 +41,7 @@ class Graph {
     visited[startingNode] = true
     
     while (queue.length) {
-      const current = queue.shift()
+      const current = queue.shift() //removes the first item in   *****
       const neighbors = this.adjList[current]
       func(current)
       
