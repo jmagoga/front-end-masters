@@ -46,3 +46,10 @@ function addEdge(v1, v2) {
   adjList[v1].push(v2);
   adjList[v2].push(v1)
 }
+
+function removeEdge(v1, v2) {
+  const v2Index = adjList[v1].indexOf(v2)
+  const v1Index = adjList[v2].indexOf(v1)
+  adjList[v1].splice(v2Index, 1)
+  adjList[v2].splice(v1Index, 1)
+}
