@@ -53,3 +53,51 @@ function removeEdge(v1, v2) {
   adjList[v1].splice(v2Index, 1)
   adjList[v2].splice(v1Index, 1)
 }
+
+
+
+
+
+
+
+class Graph = {
+  constructor() {
+  this.nodes = []
+  this.adjList = {}
+  }
+  
+  addNode(node) {
+    this.adjList [node.value] : {
+      node: node,
+      edges: []
+    }
+  }
+
+  addEdge(node1, node2) { //these are vertices
+    this.adjList[node1.value].edges.push(node2)
+    this.adjList[node2.value].edges.push(node1)
+  }                                                                     //ask interviewer if they want to return sth here
+
+  removeNode(node) { //not edge
+    delete this.adjList[node.value]
+    //below turns object into an array
+    const nodes = Object.keys(this.adjList)
+    nodes.forEach(currNode => {
+      const edges = this.adjList[currNode].edges
+      if index = edges.indexOf(node) 
+      //does this node exist here?
+      if (index > -1) { //returns -1 if it finds nothing
+        edges.splice(index, 1)
+      }  
+    }
+    
+  }
+}
+
+const adjList = new Graph()
+const node1 = { value: 1}
+const node2 = { value: 2}
+adjList.addNode(node1)
+adjList.addNode(node2)
+adjList.addEdge(node1, node2)
+
