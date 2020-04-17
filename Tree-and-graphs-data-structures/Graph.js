@@ -87,6 +87,7 @@ class Graph = {
       if index = edges.indexOf(node) 
       //does this node exist here?
       if (index > -1) { //returns -1 if it finds nothing
+        //remove it
         edges.splice(index, 1)
       }  
     }
