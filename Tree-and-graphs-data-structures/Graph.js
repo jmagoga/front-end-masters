@@ -25,3 +25,20 @@ functin deleteEdge(v1, v2) {
   adjMatrix[v1][v2] = 0
   adjMatrix[v2][v1] = 0
 }
+
+
+
+
+
+
+
+//adjacency List (to repesent a graph)
+
+const adjList = {
+1: [2, 5],
+2: [1, 5, 3, 4],
+3: [2, 4],
+4: [2, 5, 3],
+5: [4, 1, 2]
+}
+
