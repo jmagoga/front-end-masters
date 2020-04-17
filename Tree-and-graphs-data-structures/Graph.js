@@ -17,3 +17,11 @@ functin addEdge(v1, v2) {
   adjMatrix[v1][v2] = 1
   adjMatrix[v2][v1] = 1
 }
+
+//like you're representing what you like. suddenly you start to like eggs, you create that represntation
+
+//delete an edge
+functin deleteEdge(v1, v2) {
+  adjMatrix[v1][v2] = 0
+  adjMatrix[v2][v1] = 0
+}
