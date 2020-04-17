@@ -32,7 +32,7 @@ functin deleteEdge(v1, v2) {
 
 
 
-//adjacency List (to repesent a graph)
+//adjacency List (to repesent a graph). uses a LinkedList
 
 const adjList = {
 1: [2, 5],
@@ -42,3 +42,7 @@ const adjList = {
 5: [4, 1, 2]
 }
 
+function addEdge(v1, v2) {
+  adjList[v1].push(v2);
+  adjList[v2].push(v1)
+}
