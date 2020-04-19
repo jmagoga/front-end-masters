@@ -47,10 +47,43 @@ class Graph {
       
       neighbors.forEach(neighbor =>  {
         (!visisted[neighbor]) {
-          queue.push(neighbor)
+          queue.push(neigcnstruchbor)
           visited[neighbor] = true
         }
       } 
     }
   }
 }
+
+
+                        
+                        
+                        
+                        
+//binary search tree (https://frontendmasters.com/courses/trees-and-graphs/binary-search-solution/)
+                        
+//BST search --> O(h) --'h' is the height of the binary tree
+class Node {
+  constructor(value) {
+    this.value=value
+    this.left=null
+    this.right=null
+  }                        
+}
+                        
+class BinarySearchTree {
+  constructor() {
+     this.root=null    
+  }                
+  insert(value) {
+  
+  }
+  contains(value) {
+  
+  }
+}
+    
+    
+use BST when order is important. A HASH TABLE can be used to optimize pretty much anything!
+                        
+                        
