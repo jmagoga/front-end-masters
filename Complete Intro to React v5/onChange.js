@@ -22,3 +22,6 @@ const [location, setLocation] = useState('') //'' default location
 quando se usa onChange, usar onBlur tb
 
 onBlur{e => setLocation(e.target.value)}
+
+
+//pode se usar blank options!!!
