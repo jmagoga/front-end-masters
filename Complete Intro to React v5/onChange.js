@@ -10,5 +10,5 @@ const [location, setLocation] = useState('') //'' default location
 
 <input
         //onChange recebe um 'e', evento, e dele tiramos o target.value para atualizar o estado.
-  onChange(e => setLocation(e.target.value))
+  onChange(e => setLocation(e.target.value)) //a normal looking event handler
 />
