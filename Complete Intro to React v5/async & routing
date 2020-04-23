@@ -9,3 +9,6 @@ await --> wait here in this function until this completes then give me back the 
 could use .then ... but you can just 'wait for this to finish and give me back the data'
 
 npm install -D cross-env         //para funcionar em macos, linux, windows
+
+** sei la sobre o comentario abaixo. ignorar maybe
+esta na pagina escrito Effects. para tipo funcionar se a API nao funcionar...
