@@ -13,3 +13,6 @@ até que aquele chamada é resolvida. por isso, se schedule essa chamada pra ser
 ****se o useEffect não tem as dependencias (do que ele depende), ele vai rodar toda vez que da render.***
   pensar no quando queremos que aconteça a mudança de dentro do useEFfect, quando o que mudar? e assim escolher as dependencias
   que gerealmente sao coisas que estao dentro do useEFfect mesmo.
+
+  
+  if you want something to run only once, when the component mounts, the dependency array should be empty
