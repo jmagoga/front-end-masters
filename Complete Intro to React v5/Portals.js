@@ -77,3 +77,92 @@ const [showModal, setShowModal] = useState(false)
 .modalDiv {
   background-color: yellow;
 }
+
+  
+  
+  
+  
+  
+//exemplo de modal massa https://codeburst.io/reacts-portals-in-3-minutes-9b2efb74e9a9
+  Pug Stylus BabelResult
+EDIT ON
+const { React, ReactDOM } = window
+const { useState, Fragment } = React
+const { createPortal, render } = ReactDOM
+const Outsider = () => createPortal(<h1>Hello</h1>, document.body)
+
+
+const Modal = ({ children, onClose, open }) =>
+  open ?
+    createPortal(
+      <div className='modal'>
+        <button onClick={onClose} className='modal__close'>&times;</button>
+        {children}
+      </div>,
+    document.body)
+    : null
+
+const App = () => {
+  const [open, setOpen] = useState(false)
+  return (
+    <Fragment>
+    <button onClick={() => setOpen(!open)}>Show Modal?</button>
+      <Modal open={open} onClose={() => setOpen(false)}>
+        Test Modal
+      </Modal>
+    </Fragment>
+  )
+}
+  
+
+render(<App/>, document.getElementById('app'))
+View Compiled
+
+Resources1×0.5×0.25×Rerun
+  
+  
+  
+  
+  Pug Stylus BabelResult
+EDIT ON
+#app
+  min-height 100vh
+  background #663399
+  display flex
+  align-items center
+  justify-content center
+  
+button
+  padding 8px 16px
+  border-radius 4px
+  
+  
+.modal
+  position fixed
+  top 50%
+  left 50%
+  transform translate(-50%, -50%) scale(0)
+  animation show .25s ease forwards
+  z-index 2
+  background #fafafa
+  padding 1rem
+  min-height 200px
+  min-width 200px
+  display flex
+  align-items center
+  justify-content center
+  
+  
+  &__close
+    position absolute
+    top 4px
+    right 4px
+    font-size 1.25rem
+    font-weight bold
+  
+@keyframes show
+  to
+    transform translate(-50%, -50%) scale(1)
+View Compiled
+
+Resources1×0.5×0.25×Rerun
