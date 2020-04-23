@@ -3,6 +3,7 @@
 //pops on your screen -- are you sure you wanna do this?
   
 //editar para esse div do modal ficar por cima da tela, e escurecer o background, assim como fez o Brian
+//https://reactjs.org/docs/portals.html
 
 import React, { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
