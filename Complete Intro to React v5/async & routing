@@ -1,0 +1,11 @@
+async function is guaranteed to return a promise
+
+returns a promise that will resolve when a function completes
+
+the super power is the 'await' keyword
+
+await --> wait here in this function until this completes then give me back the data
+
+could use .then ... but you can just 'wait for this to finish and give me back the data'
+
+npm install -D cross-env         //para funcionar em macos, linux, windows
