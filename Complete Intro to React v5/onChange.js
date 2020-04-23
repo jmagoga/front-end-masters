@@ -15,3 +15,10 @@ const [location, setLocation] = useState('') //'' default location
 />
 
           everytime you rerun your applicaton all of those renders run again
+
+
+
+
+quando se usa onChange, usar onBlur tb
+
+onBlur{e => setLocation(e.target.value)}
