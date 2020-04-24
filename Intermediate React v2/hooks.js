@@ -72,6 +72,8 @@ use useMemo and useCallback if you have a problem!!! no need to use them if you 
 
 //*********************************************************************************************
 //useLayoutEffect
+useful if you want to measure something in the DOM
 
-
+//useImperativeHandle
+(good for library authors). how you flip one way data flow (from child to parent)
 
