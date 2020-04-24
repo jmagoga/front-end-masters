@@ -21,3 +21,18 @@ const [padding, setPadding] = useState(15)
 > 
   
 </header>
+
+//animations
+
+const spin = keyframes`
+  to {
+    transform: rotate(360deg)
+  }  
+`
+
+<span 
+  css={css`
+    display: inline-block;
+    animation: 1s ${spin} linear infinite
+  `}
+> Poodle </span>
