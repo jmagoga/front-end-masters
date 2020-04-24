@@ -1,3 +1,5 @@
+//only split at least 30kb or more. otherwise it's not worth it
+
 //lazy and Suspense
 
 //code splitting -- defer loading until later              splits into separate bundles
@@ -21,3 +23,21 @@ const Details = lazy(() => import('./Details')) //Details is now a placeholder c
       <Details path="/details/:id" />
   </Router>
 </Suspense>
+                    
+                    
+                    
+                    
+//when you're importing big libraries, only import them when they are actually going to be used, going to be rendered
+//good use case gor lazy and suspense
+                    
+import _ from 'lodash'
+import moment from 'moment'
+                    //don't load all of these libraries!!! they're huge!!!
+                    
+//muito bom pra fazer isso com componentes que são pesados... ver tudo que vem de uma network request e separar o que precisa
+//com o lazy e Suspense para poder deixar o app mais rápido
+                    
+                    
+                    
+//nao precisa necessariamente ser uma coisa com rotas, pode ser com um Modal por exemplo. nós só precisamos carregar modal
+//quando ele é de fato usado
