@@ -4,6 +4,8 @@
 
 //you can manipulate styles more programatically. a lot of control!!! difficult to do in separate documents for css(scss)
 
+//if the component is delete, the style goes with it!
+
 import {css} from "@emotion/core"
 
 const color = 'pink'
