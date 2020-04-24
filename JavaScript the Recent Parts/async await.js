@@ -12,3 +12,22 @@ async function fetchFiles(files) {
 for (let pr of prs) { // não é uma função, eh um simples loop, por isso da pra ter o await ali dentro
   console.log(await pr)
 }
+
+
+//MDN docs
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: 'resolved'
+}
+
+asyncCall();
