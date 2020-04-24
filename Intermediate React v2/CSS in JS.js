@@ -34,5 +34,9 @@ const spin = keyframes`
   css={css`
     display: inline-block;
     animation: 1s ${spin} linear infinite
+    
+    &:hover {
+      animation: 1s ${spin} linear infinite reverse
+    } 
   `}
 > Poodle </span>
