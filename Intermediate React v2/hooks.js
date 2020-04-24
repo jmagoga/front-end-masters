@@ -38,8 +38,11 @@ const [{r, g, b}, dispatch] = useReducer(reducer, { r: 0, g: 0, b: 0})
 
 case "INCREMENT_R":
   return Object.assign({}, state, { r: limitRGB(state.r + 50)})
-//****************************************************************
 
+CONTEXT API + USEREDUCER ----> basicamente redux
+
+//****************************************************************
+//useMemo
 
 
 
