@@ -27,3 +27,19 @@ const EffectComponent = () => {
 export default EffectComponent
 
 //****************************************************************
+//useReducer
+
+//um reducer é uma função que pega estado antigo e devolve um novo estado
+                                       //no useReducer, se passa uma função e um estado inicial
+const [{r, g, b}, dispatch] = useReducer(reducer, { r: 0, g: 0, b: 0})
+//devolve OBJECT(o current state da store). e ja da pra desestruturar com chaves. e
+//tb da uma dispatch function, que te deixa dispachar uma action
+const [{r, g, b}, dispatch] = useReducer(reducer, { r: 0, g: 0, b: 0})
+
+case "INCREMENT_R":
+  return Object.assign({}, state, { r: limitRGB(state.r + 50)})
+//****************************************************************
+
+
+
+
