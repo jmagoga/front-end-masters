@@ -41,3 +41,7 @@ import moment from 'moment'
                     
 //nao precisa necessariamente ser uma coisa com rotas, pode ser com um Modal por exemplo. nós só precisamos carregar modal
 //quando ele é de fato usado
+
+
+//se tu tem um Suspense que engloba componentes, e dentro desse componente tem outros componentes e num deles tem um lazy
+//o fallback pode ser o mesmo para todos!!! fácil de crir loading pages se necessário
