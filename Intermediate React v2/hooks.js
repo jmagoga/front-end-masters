@@ -40,9 +40,24 @@ case "INCREMENT_R":
   return Object.assign({}, state, { r: limitRGB(state.r + 50)})
 
 CONTEXT API + USEREDUCER ----> basicamente redux
+//*********************************************************************************************
 
-//****************************************************************
 //useMemo
+//recebe uma função de como computar uma coisa recalcular e uma dependencia (q nem no useEffect)
+const fibonacci = n => {
+  if (n<=2) {
+    return 1
+  }
+  return fibonacci(n-1) + fibonacci(n-2)
+}
+
+const MemoComponenent = () => {
+  const [num, setNum] = useState(1)
+  const [isGreen, setIsGreen] = useState(true)
+  const fib = useMemo(() => fibonacci(num), [num])
+}
+
+//*********************************************************************************************
 
 
 
