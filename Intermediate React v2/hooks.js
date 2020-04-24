@@ -54,10 +54,24 @@ const fibonacci = n => {
 const MemoComponenent = () => {
   const [num, setNum] = useState(1)
   const [isGreen, setIsGreen] = useState(true)
-  const fib = useMemo(() => fibonacci(num), [num])
+  const fib = useMemo(() => fibonacci(num), [num]) //it'll only recompute it when it's dependencies have changed
 }
 
+
+//tem tb 'memo' ue eh diferente de useMemo. tu memoiza uma coisa q a nao ser q essa coisa nao mude, tu não rerenderiza
+//esse componente ai.
+
+
+
 //*********************************************************************************************
+//useCallback
+
+hey this isn't changing. give me back the same function every single time
+
+use useMemo and useCallback if you have a problem!!! no need to use them if you don't need them
+
+//*********************************************************************************************
+//useLayoutEffect
 
 
 
