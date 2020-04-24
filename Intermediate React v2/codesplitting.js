@@ -45,3 +45,4 @@ import moment from 'moment'
 
 //se tu tem um Suspense que engloba componentes, e dentro desse componente tem outros componentes e num deles tem um lazy
 //o fallback pode ser o mesmo para todos!!! fácil de crir loading pages se necessário
+//you only need one top level Suspense!!!!
