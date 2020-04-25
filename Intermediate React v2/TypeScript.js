@@ -122,3 +122,18 @@ example1.lastName = 'Israel';
 
 
 
+
+
+
+
+
+//optional
+export class Person {
+    firstName: string;
+    middle: string;
+    lastName: string;
+    
+    constructor(data?: any) {  //usa-se o '?'
+        
+    }
+}
