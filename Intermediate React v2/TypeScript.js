@@ -70,3 +70,15 @@ function sayHello(person: Person) {
 }
 
 sayHello(new Person({firstName: 'Dylan'}));
+
+
+
+
+
+
+
+//return types
+
+function add(val1: number, val2: number): number { //apos os arguments, diz o que vai retornar. garante que não retorna algo diferente de um 'number', aqui por exemplo
+    return val1 + val2;
+}
