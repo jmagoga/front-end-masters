@@ -82,3 +82,43 @@ sayHello(new Person({firstName: 'Dylan'}));
 function add(val1: number, val2: number): number { //apos os arguments, diz o que vai retornar. garante que não retorna algo diferente de um 'number', aqui por exemplo
     return val1 + val2;
 }
+
+function voidExample(): void {
+    add(1,2);
+}
+
+function neverExample(): never {
+    throw Error;
+}
+
+
+
+//type
+//usar interfaces e classes. isso aqui ta ficando velho
+type person = {firstName: string};
+
+const example3: person = {firstName: 'Dollan'}; //tem que ter as coisas q tem dentro de um 'person'
+
+example3.firstName = 'Dylan';
+
+
+
+
+
+//interfaces
+export interface Person {
+    firstName: string;
+    middleName: string;
+    lastName: string;
+}
+
+import { Person } from './person.interface';
+
+const example1: Person = {firstName: 'Dollan', middleName: 'Dollan', lastName: 'Dollan'};
+
+example1.firstName = 'Dylan';
+example1.middleName = 'Coding God';
+example1.lastName = 'Israel';
+
+
+
