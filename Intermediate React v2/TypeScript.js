@@ -151,4 +151,15 @@ export class Person {
                 
                 
                 
- //front end masters
+ //front end masters https://frontendmasters.com/courses/intermediate-react-v2/typescript-configuration-for-react/
+ npm install -D typescript
+ //start typescript project
+ npx tsc --init //ai configura os arquivos no tsconfig
+ //adicioanr tipagem no React
+ npm install -D @types/react @types/react-dom @types/reach__router
+  
+ 
+                
+                
+                
+ 
