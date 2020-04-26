@@ -13,5 +13,5 @@ const multiplyBy2 = input = input * 2
 //obviamente podemos passar ela como callback
 copyArrayAndManipulate([1, 2, 3], multiplyBy2)
 
-//mas tb nao precisamos definir a função!!!
+//mas tb nao precisamos definir a função!!! //pra que definir ela em global se podemos só passar a intrução direto!!!
 copyArrayAndManipulate([1, 2, 3], input => input * 2)
