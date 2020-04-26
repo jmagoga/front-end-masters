@@ -89,7 +89,7 @@ anotherFunction() // (!) vai trabalhar em cima do mesmo scope la de outer, o cou
 
 
 //closures are good for their persistent memory.
-//memoize
+//memoize (give our functions persitent momery of their previous input/output combinations)
 //iterators and generators use closures (most contemporary patterns for handling data)
 //dont pollute the global namespace (module pattern)
 //asynchronity -> callbacks and promises rely on closure to persist state in an asynchronous environment
