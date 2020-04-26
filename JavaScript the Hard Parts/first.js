@@ -46,3 +46,27 @@ function createFunction() {
 
 const generatedFunc = createFunction()
 const result = generatedFunc(3) // 6
+
+
+
+
+
+
+
+//calling a function in the same function call as it was defined
+function outer() {
+  let counter = 0
+  function incrementCounter() {
+    counter++
+  }
+  incrementCounter()
+}
+outer()
+
+
+
+
+
+
+
+
