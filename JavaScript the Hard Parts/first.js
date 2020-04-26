@@ -83,7 +83,9 @@ myNewFunction() //aumenta counter na backpack (q foi criada no myNewFunction)
 //backpack
 //closure
 
-
+const anotherFunction = outer()                             //informação abaixo FALSA.
+anotherFunction() // (!) vai trabalhar em cima do mesmo scope la de outer, o counter n vai estar default 0... vai estar 2 ja.
+                                //acima temos uma nova backpack!!!
 
 
 
