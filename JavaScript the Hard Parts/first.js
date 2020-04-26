@@ -18,3 +18,31 @@ copyArrayAndManipulate([1, 2, 3], input => input * 2)
 
 //o mesmo que isso
 arr.map(input => input * 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//function can be returned from other function in javascript
+//closure
+function createFunction() {
+  function multiplyBy2(num) {
+    return num * 2
+  }
+  return multiplyBy2
+}
+
+const generatedFunc = createFunction()
+const result = generatedFunc(3) // 6
