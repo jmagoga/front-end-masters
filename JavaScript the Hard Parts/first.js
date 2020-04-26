@@ -15,3 +15,6 @@ copyArrayAndManipulate([1, 2, 3], multiplyBy2)
 
 //mas tb nao precisamos definir a função!!! //pra que definir ela em global se podemos só passar a intrução direto!!!
 copyArrayAndManipulate([1, 2, 3], input => input * 2)
+
+//o mesmo que isso
+arr.map(input => input * 2)
