@@ -76,7 +76,7 @@ function outer() {
   return incrementCounter
 }
 
-const myNewFunction = outer()
+const myNewFunction = outer() //recebe incrementCounter() tb o que está ###em seus arredores (counter)### **em sua backpack**
 myNewFunction()
 myNewFunction()
 
