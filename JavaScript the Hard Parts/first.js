@@ -77,8 +77,8 @@ function outer() {
 }
 
 const myNewFunction = outer() //recebe incrementCounter() tb o que está ###em seus arredores (counter)### **em sua backpack**
-myNewFunction()
-myNewFunction()
+myNewFunction() //aumenta counter na backpack (q foi criada no myNewFunction)
+myNewFunction() //aumenta counter na backpack (q foi criada no myNewFunction)
 
 
 
