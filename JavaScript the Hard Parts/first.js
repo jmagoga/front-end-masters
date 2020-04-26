@@ -59,9 +59,11 @@ function outer() {
   function incrementCounter() {
     counter++
   }
-  incrementCounter()
+  incrementCounter() //quando isso corre, acontece 'counter++'. counter++ olha dentro de incrementCounter mas não acha a
+  //variavel counter. entao sai de dentro do execution context de incrementCounter e olha no de outer(), la, ENCONTRA counter
 }
 outer()
+
 
 
 
