@@ -68,3 +68,10 @@ user1.increment() //procura em user1, mas nao acha. entao vai direto ao __proto_
 this = user1
 this.score++     é a mesma coisa que      user1.score++
 
+
+
+
+
+//confirm that an object has a property
+obj.hasOwnProperty('score')
+
