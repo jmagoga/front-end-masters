@@ -5,3 +5,18 @@ const user1 = {
     user1.score++ //this ?
   }
 }
+
+//or
+
+const user2 = {}
+
+user2.name = "Jack"
+user2.score = 3
+user2.increment = function() {user2.score++}
+
+
+
+
+
+
+
