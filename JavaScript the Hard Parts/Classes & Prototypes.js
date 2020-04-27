@@ -85,4 +85,18 @@ all objects in javascript have a __proto__      -> hasOwnProperty is in there
 with 'Object.create(userFunctionStore)' nós estamos adicionando coisas ao __proto__, tomando controle dele
 
 
+//new keyword
+
+automates the job of creating a new user. returns user object
+
+
+
+
+
+
+
+
+
+
+
 
