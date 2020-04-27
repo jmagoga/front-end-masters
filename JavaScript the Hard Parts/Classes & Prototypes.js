@@ -64,5 +64,7 @@ user1.increment() //procura em user1, mas nao acha. entao vai direto ao __proto_
 
 
 
-
+//this é um implicit parameter. ele é criado pelo javascript mesmo, ele vai se referir a por exemplo user1 aqui
+this = user1
+this.score++     é a mesma coisa que      user1.score++
 
