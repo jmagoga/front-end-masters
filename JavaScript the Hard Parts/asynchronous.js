@@ -40,4 +40,7 @@ futureData.value //vai estar atualizado
 futureData.then(display)
 
 //e por isso podemos passar funções inline ali, tipo
-futureData.then(data => console.log(data))
+futureData.then(data => console.log(data)) 
+
+//e é por isso que da pra ter muitos chained .then()
+.then(...).then(...).then(...) //cada uma adicionando uma função para o que fazer com a data!
