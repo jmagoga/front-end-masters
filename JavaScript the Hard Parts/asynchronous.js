@@ -6,7 +6,12 @@
 //htmldom - document
 //console console()
 
+//promises
 
+//façade functions
+
+//--initiate background browser work
+//--return a placeholder object (promise) immediately in javascript
 
 
 
