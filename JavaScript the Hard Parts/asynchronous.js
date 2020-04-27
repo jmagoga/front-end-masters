@@ -37,3 +37,7 @@ futureData.value //vai estar atualizado
 //it gets stored in the value, then the value is passed to the function that is in that array
 
 .then() //simplesmente poe um função dentro daquele onfulfilled array!
+futureData.then(display)
+
+//e por isso podemos passar funções inline ali, tipo
+futureData.then(data => console.log(data))
