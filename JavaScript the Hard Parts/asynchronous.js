@@ -13,5 +13,11 @@
 //--initiate background browser work
 //--return a placeholder object (promise) immediately in javascript
 
+function display(data){
+   console.log(data)
+}
 
+const futureData = fetch(https...)
+futureData.then(display)
 
+console.log("Me first!")
