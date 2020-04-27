@@ -8,7 +8,7 @@
 
 //promises
 
-//façade functions
+//two pronged façade functions (uma fica no javascript outra no browser)
 
 //--initiate background browser work
 //--return a placeholder object (promise) immediately in javascript
