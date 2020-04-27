@@ -48,3 +48,8 @@ futureData.then(data => console.log(data))
 
 //setTimeout goes through the browser features, the TIMER
 quanto setTimeout completa, ele vai para o CALLBACK QUEUE
+
+
+//saber diferenciar entre call stack e callback queue. o call stack vao sempre antes as funções sincronas
+//no callback queue, do browser, vao as funções asincronas.
+//as funções assincronas depois sao passadas para o call stack
