@@ -45,7 +45,7 @@ user1.increment()
 
 function userCreator(name, score) { //passa um objeto
   const newUser = Object.create(userFunctionStore) //todo newUser já vai ter o increment e o login quando é inicializado
-  newUser.name = name
+  newUser.name = name      //todos novos criados tem uma referencia a esse userFunctionStore como __proto__
   newUser.score = score
   return newUser
 }
