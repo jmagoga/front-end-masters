@@ -59,3 +59,21 @@ quanto setTimeout completa, ele vai para o CALLBACK QUEUE
 when display happens, it goes FROM the callback queue on to the microtask queue
 display comes out of the micro task queue and goes to the call stack
 
+//there's also onrejection (another array) with the details of the error. a function to handle that error
+
+you can pass a function to handle that error
+
+
+
+Hold promise defered-functions in a microtask queue and callback function in a task queue (Callback queue)
+when the Web Browser Feature (API) finishes
+Add the function to the Call stack (i.e run the function)  when:
+- call stack is empty & global  code code run (have the event loop check this condition)
+Prioritize function in the microtask queue over the callack queue
+
+
+
+
+
+
+
