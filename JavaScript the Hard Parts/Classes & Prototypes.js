@@ -78,7 +78,7 @@ obj.hasOwnProperty('score')
 
 
 Object.prototype ---> has a bunch of useful functions (available to all of the objects)
-all objects in javascript have a __proto__
+all objects in javascript have a __proto__      -> hasOwnProperty is in there
 
 
 
