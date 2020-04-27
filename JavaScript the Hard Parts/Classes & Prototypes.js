@@ -57,7 +57,7 @@ const userFunctionStore = { //é um objeto que é com o que é inicializado um n
   login: function() {console.log("Logged in!")}
 }
 
-const user1 = userCreator("Will", 9)
+const user1 = userCreator("Will", 9) //these don't have each a __proto__. they HAVE A LINK TO A *SINGLE* __PROTO__
 const user2 = userCreator("Joan", 4)
 user1.increment() //procura em user1, mas nao acha. entao vai direto ao __proto__ e la encontrar
 
