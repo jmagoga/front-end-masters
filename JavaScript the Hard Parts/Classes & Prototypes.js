@@ -59,7 +59,7 @@ const userFunctionStore = { //é um objeto que é com o que é inicializado um n
 
 const user1 = userCreator("Will", 9)
 const user2 = userCreator("Joan", 4)
-user1.increment()
+user1.increment() //procura em user1, mas nao acha. entao vai direto ao __proto__ e la encontrar
 
 
 
