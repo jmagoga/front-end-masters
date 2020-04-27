@@ -50,6 +50,8 @@ function userCreator(name, score) { //passa um objeto
   return newUser
 }
 
+//o abaixo é como se fosse o que tem dentro do __proto__
+//todo usuario inicializado assim, vai ter as coisas que tem dentro do __proto__
 const userFunctionStore = { //é um objeto que é com o que é inicializado um novo usuario
   increment: function() {this.score++}
   login: function() {console.log("Logged in!")}
