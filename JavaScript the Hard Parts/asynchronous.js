@@ -18,6 +18,9 @@ function display(data){
 }
 
 const futureData = fetch(https...) //fetch simply returns an object, with { value   onFulfilled [ ] //empty array }
+//futureData agora tem um objeto dentro dele
 futureData.then(display)
 
 console.log("Me first!")
+
+
