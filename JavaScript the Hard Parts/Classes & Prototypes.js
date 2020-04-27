@@ -35,5 +35,21 @@ function userCreator(name, score) {
 const user1 = userCreator("Will", 9)
 const user2 = userCreator("Joan", 4)
 user1.increment()
+//https://frontendmasters.com/courses/javascript-hard-parts-v2/factory-functions-example/
+//o acima não funciona... tem que ficar se criando as coisas individuais (sei la, n entendi, ver de novo)
 
-//
+//prototype chain
+
+
+
+
+
+
+
+
+
+
+
+
+
+
