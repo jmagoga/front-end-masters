@@ -35,3 +35,5 @@ futureData.value //vai estar atualizado
 
 //aquele empty array é onde podemos passar um função para o código rodar automaticamente quando voltar uma resposta
 //it gets stored in the value, then the value is passed to the function that is in that array
+
+.then() //simplesmente poe um função dentro daquele onfulfilled array!
