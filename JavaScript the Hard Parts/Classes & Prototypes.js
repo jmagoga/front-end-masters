@@ -38,17 +38,26 @@ user1.increment()
 //https://frontendmasters.com/courses/javascript-hard-parts-v2/factory-functions-example/
 //o acima não funciona... tem que ficar se criando as coisas individuais (sei la, n entendi, ver de novo)
 
+
+
+
 //prototype chain, para não ficar criando uma função para cada usuario novo...
 
+function userCreator(name, score) { //passa um objeto
+  const newUser = Object.create(userFunctionStore) //todo newUser já vai ter o increment e o login quando é inicializado
+  newUser.name = name
+  newUser.score = score
+  return newUser
+}
 
+const userFunctionStore = { //é um objeto que é com o que é inicializado um novo usuario
+  increment: function() {this.score++}
+  login: function() {console.log("Logged in!")}
+}
 
-
-
-
-
-
-
-
+const user1 = userCreator("Will", 9)
+const user2 = userCreator("Joan", 4)
+user1.increment()
 
 
 
