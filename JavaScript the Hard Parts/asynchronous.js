@@ -54,3 +54,8 @@ quanto setTimeout completa, ele vai para o CALLBACK QUEUE
 //no callback queue, do browser, vao as funções asincronas.
 //as funções assincronas depois sao passadas para o call stack
 //o EVENT LOOP que faz essa mão de levar as funções lá do callback queue para o call stack
+
+//there's another queue, the micro task queue https://frontendmasters.com/courses/javascript-hard-parts-v2/web-apis-promises-example-microtask-queue/
+when display happens, it goes FROM the callback queue on to the microtask queue
+display comes out of the micro task queue and goes to the call stack
+
