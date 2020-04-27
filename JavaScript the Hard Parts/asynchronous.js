@@ -17,7 +17,7 @@ function display(data){
    console.log(data)
 }
 
-const futureData = fetch(https...)
+const futureData = fetch(https...) //fetch simply returns an object
 futureData.then(display)
 
 console.log("Me first!")
