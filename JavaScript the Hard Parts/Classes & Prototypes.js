@@ -38,7 +38,9 @@ user1.increment()
 //https://frontendmasters.com/courses/javascript-hard-parts-v2/factory-functions-example/
 //o acima não funciona... tem que ficar se criando as coisas individuais (sei la, n entendi, ver de novo)
 
-//prototype chain
+//prototype chain, para não ficar criando uma função para cada usuario novo...
+
+
 
 
 
