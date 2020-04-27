@@ -53,3 +53,4 @@ quanto setTimeout completa, ele vai para o CALLBACK QUEUE
 //saber diferenciar entre call stack e callback queue. o call stack vao sempre antes as funções sincronas
 //no callback queue, do browser, vao as funções asincronas.
 //as funções assincronas depois sao passadas para o call stack
+//o EVENT LOOP que faz essa mão de levar as funções lá do callback queue para o call stack
