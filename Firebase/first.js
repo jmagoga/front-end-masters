@@ -1,3 +1,11 @@
+//coisas que podemos acessar no snapshot: 
+//docs, empty, metadata, query, size
+//métodos:
+//docChanges(), forEach(), isEqual()
+
+
+
+
 useEffect(() => {
     async function getSnapshot() {
       const snapshot = await firestore.collection('businesses').get()
