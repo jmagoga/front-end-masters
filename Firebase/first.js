@@ -64,3 +64,7 @@ const handleRemove = async id => {
     const businesses = allBusinesses.filter(business => business.id !== id)
     setBusinessesPendingApprovalFromDatabase(businesses)
   }
+
+//subscribing to database updates
+//when the database changes, our UI changes
+
