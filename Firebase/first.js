@@ -53,3 +53,14 @@ handleCreate = async post => {
   
   this.setState({ posts: [newPost, ...posts] })
 }
+
+
+//delete from database
+const handleRemove = async id => {
+    const allBusinesses = businessesPendingApprovalFromDatabase
+    //com interpolated strings, faz a rota e passa a id delete. depois chama o delete.
+    await firestore.doc(`businessesPendingAdminApproval/${id}`).delete()
+
+    const businesses = allBusinesses.filter(business => business.id !== id)
+    setBusinessesPendingApprovalFromDatabase(businesses)
+  }
