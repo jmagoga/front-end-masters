@@ -42,3 +42,14 @@ useEffect(() => {
     }
     getSnapshot()
   }, [])
+
+
+//writing to database and getting a single document out
+handleCreate = async post => {
+  const docRef = await firestore.collection('posts').add(post)
+  const doc = await docRef.get()
+  
+  const newPost = collectIdsAndDocs(doc)
+  
+  this.setState({ posts: [newPost, ...posts] })
+}
