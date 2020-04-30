@@ -68,4 +68,23 @@ const handleRemove = async id => {
 //subscribing to database updates
 //when the database changes, our UI changes
 //tem que fazer isso funcionar porque será usado para a lavagem quando novos serviços são agendados
-//tipo um twitter que mostra 'novo serviço agendado'
+//tipo um twitter que mostra 'novo serviço agendado' https://stackoverflow.com/questions/61526184/how-to-translate-componentdidmound-and-componentwillunmount-to-useeffect-react/61526875#61526875
+const collectIdsAndDocs = doc => { return { id: doc.id, ...doc.data() }
+
+useEffect(() => {
+
+    const unsubscribeApproved = firestore.collection('approvedBusinesses').onSnapshot(snapshot => {
+      const approvedBiz = snapshot.docs.map(collectIdsAndDocs)
+      setApprovedBusinesses(approvedBiz)
+    })
+
+    const unsubscribePending = firestore.collection('businessesPendingAdminApproval').onSnapshot(snapshot => {
+      const pendingBiz = snapshot.docs.map(collectIdsAndDocs)
+      setBusinessesPendingApproval(pendingBiz)
+    })
+    
+    return () => { //retorna para fazer o unsubscribe
+      unsubscribeApproved()
+      unsubscribePending()
+    }
+  }, [])
