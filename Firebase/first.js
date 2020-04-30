@@ -132,4 +132,10 @@ useEffect(() => {
   
   
   
-  //
+  //update que não está funcionando
+  
+  const updateRating = item => {
+    const postRef = firestore.doc(`aprovedBusinesses/${item.id}`)
+    postRef.update({rating: rating + 1})
+    console.log(postRef)
+  }
