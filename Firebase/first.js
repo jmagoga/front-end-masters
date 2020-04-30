@@ -88,3 +88,47 @@ useEffect(() => {
       unsubscribePending()
     }
   }, [])
+                                  
+                                  
+  //mudei, POR CONTA, tudo par isso:
+useEffect(() => {
+
+    const unsubscribeApproved = firestore.collection('approvedBusinesses').onSnapshot(snapshot => {
+      const approvedBiz = snapshot.docs.map(collectIdsAndDocs)
+      setApprovedBusinesses(approvedBiz)
+    })
+
+    const unsubscribePending = firestore.collection('businessesPendingAdminApproval').onSnapshot(snapshot => {
+      const pendingBiz = snapshot.docs.map(collectIdsAndDocs)
+      setBusinessesPendingApproval(pendingBiz)
+    })
+
+    const unsubscribeRejected = firestore.collection('rejectedBusinesses').onSnapshot(snapshot => {
+      const rejectedBiz = snapshot.docs.map(collectIdsAndDocs)
+      setRejectedBusinesses(rejectedBiz)
+    })
+
+    //so that it stops listening even if user navigates away, avoid memory leak. stop listening after it mounts
+    return () => {
+      unsubscribeApproved()
+      unsubscribePending()
+      unsubscribeRejected()
+    }
+  }, [])
+
+  const handleRemove = async item => {
+    await firestore.collection(`rejectedBusinesses`).add(item) 
+    await firestore.doc(`businessesPendingAdminApproval/${item.id}`).delete()
+  }
+
+  const handleAccept = async item => {
+    await firestore.collection(`approvedBusinesses`).add(item) 
+    await firestore.doc(`businessesPendingAdminApproval/${item.id}`).delete()
+  }
+  
+  
+  
+  
+  
+  
+  //
