@@ -67,4 +67,5 @@ const handleRemove = async id => {
 
 //subscribing to database updates
 //when the database changes, our UI changes
-
+//tem que fazer isso funcionar porque será usado para a lavagem quando novos serviços são agendados
+//tipo um twitter que mostra 'novo serviço agendado'
