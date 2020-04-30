@@ -127,15 +127,16 @@ useEffect(() => {
     await firestore.doc(`businessesPendingAdminApproval/${item.id}`).delete()
   }
   
-  
-  
-  
-  
-  
-  //update que não está funcionando
+    
+  //update que NÃO está funcionando
   
   const updateRating = item => {
     const postRef = firestore.doc(`aprovedBusinesses/${item.id}`)
     postRef.update({rating: rating + 1})
     console.log(postRef)
   }
+  
+  
+  
+  //authentication
+  
