@@ -116,6 +116,7 @@ useEffect(() => {
     }
   }, [])
 
+  //parece que o async await não é necessário
   const handleRemove = async item => {
     await firestore.collection(`rejectedBusinesses`).add(item) 
     await firestore.doc(`businessesPendingAdminApproval/${item.id}`).delete()
