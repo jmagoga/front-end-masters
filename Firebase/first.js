@@ -139,4 +139,36 @@ useEffect(() => {
   
   
   //authentication
+  //login com o google funciona. agora não se usa onAuthStateChange, mas sim getRedirectResult, já que é signInWithRedirect
+useEffect(() => { /* https://firebase.google.com/docs/auth/web/google-signin */
+    auth
+      .getRedirectResult()
+      .then(function (result) {
+        console.log('result: ', result)
+        if (result.credential) {
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          const token = result.credential.accessToken
+          setIdToken(token)
+          // ...
+        }
+        // The signed-in user info.
+        const user = result.user
+        console.log('user: ', user)
+        //pegar o nome para setar o username
+        setUsername(user.displayName)
+      })
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code
+        var errorMessage = error.message
+        // The email of the user's account used.
+        console.log('errorCode and errorMessage: ', errorCode, errorMessage)
+        console.log('mude Block third-party cookies para falso"')
+        // ...
+      })
+  }, [])
+                                  
+                                  
+                                  
+ //
   
